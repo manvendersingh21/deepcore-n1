@@ -277,7 +277,9 @@ class ControlRoom:
         args = ['--worker',mode,'--seed',str(seed),'--pipeline',pipeline]
         if self.remote:
             # Host is a launch-time option, never controlled by HTTP requests.
-            command = ['ssh',self.remote,'cd ~/deepcore-n1 && MUJOCO_GL=egl MUJOCO_EGL_DEVICE_ID=0 CUDA_VISIBLE_DEVICES=0 __EGL_VENDOR_LIBRARY_FILENAMES=$HOME/.local/share/glvnd/egl_vendor.d/10_nvidia.json ~/perception-loop-n1/.venv/bin/python -u -m ui.web_server ' + ' '.join(args)]
+            # Checkout directory on the GPU host; launch-time option, like the host itself.
+            remote_dir = os.environ.get('DEEPCORE_REMOTE_DIR', '~/deepcore-n1')
+            command = ['ssh',self.remote,f'cd {remote_dir} && MUJOCO_GL=egl MUJOCO_EGL_DEVICE_ID=0 CUDA_VISIBLE_DEVICES=0 __EGL_VENDOR_LIBRARY_FILENAMES=$HOME/.local/share/glvnd/egl_vendor.d/10_nvidia.json ~/perception-loop-n1/.venv/bin/python -u -m ui.web_server ' + ' '.join(args)]
         else:
             command = [sys.executable,'-u','-m','ui.web_server',*args]
         stderr = []
