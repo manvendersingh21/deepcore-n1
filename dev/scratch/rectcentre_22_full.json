@@ -1,0 +1,211 @@
+{
+ "pipeline": "dev/scratch/controller_rectcentre.py",
+ "seeds": [
+  22
+ ],
+ "aggregate": {
+  "vision_3d_rmse_mm": 11.76,
+  "rubble_cleared_count": 2.0,
+  "peak_core_contact_force_n": 12.31,
+  "composite_score": 84.9,
+  "core_shattered": false,
+  "core_extracted": true,
+  "extraction_rate": 1.0,
+  "max_wrist_force_n": 11.58,
+  "vision_latency_p99_ms": 9.85,
+  "force_ok_25": true,
+  "passed": true
+ },
+ "per_seed": [
+  {
+   "seed": 22,
+   "vision_3d_rmse_mm": 11.76,
+   "rubble_cleared_count": 2,
+   "peak_core_contact_force_n": 12.31,
+   "max_wrist_force_n": 11.58,
+   "core_shattered": false,
+   "core_extracted": true,
+   "vision_latency_p99_ms": 9.85,
+   "composite_score": 84.9,
+   "score_breakdown": {
+    "vision": 21.18,
+    "clearance": 25.0,
+    "extraction": 30.0,
+    "safety": 5.69,
+    "latency": 3.03
+   },
+   "force_ok_25": true,
+   "pipeline_errors": []
+  }
+ ],
+ "autopsy": {
+  "22": {
+   "objects": {
+    "core": {
+     "mean_err_mm": 14.1,
+     "bias_xyz_mm": [
+      7.0,
+      -12.2,
+      0.0
+     ],
+     "teleport_frames": 0,
+     "frames_scored": 40,
+     "occluded_mean_err_mm": 14.4,
+     "final_pos_m": [
+      0.5209,
+      0.1515,
+      0.425
+     ]
+    },
+    "rubble_a": {
+     "mean_err_mm": 9.2,
+     "bias_xyz_mm": [
+      -3.7,
+      1.7,
+      0.0
+     ],
+     "teleport_frames": 0,
+     "frames_scored": 40,
+     "occluded_mean_err_mm": 9.3,
+     "final_pos_m": [
+      0.389,
+      0.0047,
+      0.424
+     ]
+    },
+    "rubble_b": {
+     "mean_err_mm": 12.0,
+     "bias_xyz_mm": [
+      3.0,
+      9.5,
+      5.4
+     ],
+     "teleport_frames": 0,
+     "frames_scored": 40,
+     "occluded_mean_err_mm": 10.8,
+     "final_pos_m": [
+      0.2722,
+      -0.2007,
+      0.424
+     ]
+    }
+   },
+   "core_force_spikes": [],
+   "phase_timeline": [
+    [
+     0.0,
+     "SURVEY:-"
+    ],
+    [
+     1.45,
+     "APPROACH:rubble_b"
+    ],
+    [
+     1.7,
+     "DESCEND:rubble_b"
+    ],
+    [
+     2.0,
+     "GRASP:rubble_b"
+    ],
+    [
+     2.45,
+     "LIFT:rubble_b"
+    ],
+    [
+     2.65,
+     "APPROACH:rubble_b"
+    ],
+    [
+     3.0,
+     "DESCEND:rubble_b"
+    ],
+    [
+     3.5,
+     "GRASP:rubble_b"
+    ],
+    [
+     3.9,
+     "LIFT:rubble_b"
+    ],
+    [
+     4.15,
+     "APPROACH:rubble_b"
+    ],
+    [
+     4.5,
+     "DESCEND:rubble_b"
+    ],
+    [
+     4.95,
+     "GRASP:rubble_b"
+    ],
+    [
+     5.4,
+     "LIFT:rubble_b"
+    ],
+    [
+     5.65,
+     "TRANSPORT:rubble_b"
+    ],
+    [
+     6.05,
+     "PLACE:rubble_b"
+    ],
+    [
+     6.5,
+     "RELEASE:rubble_b"
+    ],
+    [
+     6.65,
+     "RETREAT:rubble_b"
+    ],
+    [
+     6.85,
+     "APPROACH:rubble_a"
+    ],
+    [
+     6.9,
+     "APPROACH:core"
+    ],
+    [
+     7.35,
+     "DESCEND:core"
+    ],
+    [
+     8.2,
+     "GRASP:core"
+    ],
+    [
+     8.55,
+     "LIFT:core"
+    ],
+    [
+     8.8,
+     "TRANSPORT:core"
+    ],
+    [
+     9.2,
+     "PLACE:core"
+    ],
+    [
+     9.75,
+     "RELEASE:core"
+    ],
+    [
+     9.9,
+     "RETREAT:core"
+    ],
+    [
+     10.15,
+     "DONE:-"
+    ]
+   ],
+   "summary_lines": [
+    "core: mean 3D err 14.1mm, bias xyz [7.0, -12.2, 0.0]mm, 0/40 frames >50mm, err while occluded 14.4mm",
+    "rubble_a: mean 3D err 9.2mm, bias xyz [-3.7, 1.7, 0.0]mm, 0/40 frames >50mm, err while occluded 9.3mm",
+    "rubble_b: mean 3D err 12.0mm, bias xyz [3.0, 9.5, 5.4]mm, 0/40 frames >50mm, err while occluded 10.8mm"
+   ]
+  }
+ }
+}

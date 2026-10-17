@@ -1,0 +1,141 @@
+{
+  "animationCount": 0,
+  "categories": [
+    {
+      "uid": "22a2f677efad4d7bbca5ad45f9b5868e",
+      "name": "Cars & Vehicles",
+      "slug": "cars-vehicles",
+      "uri": "https://api.sketchfab.com/v3/categories/22a2f677efad4d7bbca5ad45f9b5868e",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/45dd0cc0860ac57fcd63bde1cc3f2b7c-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 0,
+  "createdAt": "2025-03-23T01:33:42.867831",
+  "embedUrl": "https://sketchfab.com/models/89b637c672924822a95142d60f4f57ec/embed",
+  "faceCount": 449389,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "likeCount": 9,
+  "name": "Earth Master 7000",
+  "publishedAt": "2025-03-23T02:04:27.765757",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "86946ee3653541df8141b47f2595b3a1",
+        "width": 1920,
+        "height": 1080,
+        "size": 151290,
+        "url": "https://media.sketchfab.com/models/89b637c672924822a95142d60f4f57ec/thumbnails/4bae5f02c9c740a99e454c41cb32fb45/9c83d82f3c274eea86a538990d891471.jpeg"
+      },
+      {
+        "uid": "c1dbd0d385924a0c8b72a528beb8e822",
+        "width": 1024,
+        "height": 576,
+        "size": 53583,
+        "url": "https://media.sketchfab.com/models/89b637c672924822a95142d60f4f57ec/thumbnails/4bae5f02c9c740a99e454c41cb32fb45/a81b0d52a3e94261adeeeee99dc71e46.jpeg"
+      },
+      {
+        "uid": "365aceb8161f4c8c94c7c6995e1f1770",
+        "width": 720,
+        "height": 405,
+        "size": 32250,
+        "url": "https://media.sketchfab.com/models/89b637c672924822a95142d60f4f57ec/thumbnails/4bae5f02c9c740a99e454c41cb32fb45/28abc96fbbe543729c5974840cd49732.jpeg"
+      },
+      {
+        "uid": "02ac25699202499490a5fc311165c469",
+        "width": 256,
+        "height": 144,
+        "size": 7381,
+        "url": "https://media.sketchfab.com/models/89b637c672924822a95142d60f4f57ec/thumbnails/4bae5f02c9c740a99e454c41cb32fb45/f8265d2653ba4722899e94e9bd29f327.jpeg"
+      },
+      {
+        "uid": "47c4ba12f6ad42c1b540d4d13a66ab24",
+        "width": 64,
+        "height": 36,
+        "size": 1517,
+        "url": "https://media.sketchfab.com/models/89b637c672924822a95142d60f4f57ec/thumbnails/4bae5f02c9c740a99e454c41cb32fb45/c5c7f12ef4dc47d59f324fae9c4b1313.jpeg"
+      }
+    ]
+  },
+  "uid": "89b637c672924822a95142d60f4f57ec",
+  "uri": "https://api.sketchfab.com/v3/models/89b637c672924822a95142d60f4f57ec",
+  "user": {
+    "uid": "97940a6dfa434d689838641c6c168fa4",
+    "username": "CMBC",
+    "displayName": "Brian Trepanier",
+    "account": "basic",
+    "profileUrl": "https://sketchfab.com/CMBC",
+    "avatar": {
+      "uid": "ade567e10ef64375b161d0643e1022c1",
+      "uri": "https://api.sketchfab.com/v3/avatars/ade567e10ef64375b161d0643e1022c1",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 1088,
+          "url": "https://media.sketchfab.com/avatars/ade567e10ef64375b161d0643e1022c1/c05e99b953a4434b851214a3210bc857.jpeg"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 1577,
+          "url": "https://media.sketchfab.com/avatars/ade567e10ef64375b161d0643e1022c1/a533f6ed9b064b7cbc69810930aa884b.jpeg"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 3730,
+          "url": "https://media.sketchfab.com/avatars/ade567e10ef64375b161d0643e1022c1/9e9de1ad43894ab1ae4e209ec49d2925.jpeg"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 4309,
+          "url": "https://media.sketchfab.com/avatars/ade567e10ef64375b161d0643e1022c1/906497c62ca4436da40577f57abdea0a.jpeg"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/97940a6dfa434d689838641c6c168fa4"
+  },
+  "vertexCount": 224148,
+  "viewCount": 267,
+  "viewerUrl": "https://sketchfab.com/3d-models/earth-master-7000-89b637c672924822a95142d60f4f57ec",
+  "isDownloadable": true,
+  "isProtected": false,
+  "description": "The EarthMaster 7000 is a cutting-edge construction vehicle built for heavy-duty operations in extreme environments. Featuring an armored, retractable frame, this vehicle is designed to withstand the harshest conditions, whether on rugged terrain or in high-risk demolition zones.\n\tIts large, treaded wheels provide exceptional stability and mobility across uneven surfaces, while an adjustable crane arm and bucket offer precise digging capabilities. A robotic arm ensures careful handling of materials, while the hydraulic-powered drill is capable of penetrating tough surfaces for foundation work or structural adjustments.\n\tBuilt with reinforced steel and advanced hydraulic systems, the EarthMaster 7000 delivers unmatched strength, reliability, and efficiency. Its all-in-one design reduces the need for multiple vehicles, streamlining operations and improving cost-effectiveness. Whether for excavation, demolition, or drilling, the EarthMaster 7000 is the ultimate solution for any challenging construction project.",
+  "price": null,
+  "downloadCount": 72,
+  "editorUrl": "https://sketchfab.com/models/89b637c672924822a95142d60f4f57ec/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "blender-exporter",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2025-03-23T02:05:11.335767",
+  "pbrType": null,
+  "textureCount": 1,
+  "materialCount": 1
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "Locked core files after robot presentation edits",
+  "checks": {
+    "verifier_harness.py": true,
+    "scene.xml": true,
+    "env_runner.py": true,
+    "sensor_corruption.py": true
+  },
+  "passed": true
+}

@@ -1,0 +1,1841 @@
+[
+  {
+    "version": 0,
+    "source": "baseline",
+    "contract_id": "baseline",
+    "opt": {
+      "vision_3d_rmse_mm": 124.61,
+      "rubble_cleared_count": 0.67,
+      "peak_core_contact_force_n": 27.39,
+      "composite_score": 12.57,
+      "core_shattered": true,
+      "core_extracted": false,
+      "extraction_rate": 0.0,
+      "max_wrist_force_n": 37.79,
+      "vision_latency_p99_ms": 5.03,
+      "force_ok_25": false,
+      "passed": false
+    },
+    "holdout": {
+      "vision_3d_rmse_mm": 119.96,
+      "rubble_cleared_count": 0.67,
+      "peak_core_contact_force_n": 22.18,
+      "composite_score": 16.0,
+      "core_shattered": true,
+      "core_extracted": false,
+      "extraction_rate": 0.0,
+      "max_wrist_force_n": 30.62,
+      "vision_latency_p99_ms": 3.59,
+      "force_ok_25": false,
+      "passed": false
+    },
+    "accepted": true,
+    "reasons": [
+      "baseline reference"
+    ],
+    "timestamp": "2026-10-17T20:55:49+00:00",
+    "sha256": "b5d655569b2b1a7f6d92025743f6091497528ecd2e86cd69eea78cf46da7e24b",
+    "path": "workspace/versions/v0.py",
+    "autopsy": {
+      "11": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 128.0,
+            "bias_xyz_mm": [
+              7.6,
+              -10.3,
+              20.5
+            ],
+            "teleport_frames": 33,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 150.0,
+            "final_pos_m": [
+              0.4504,
+              0.0018,
+              0.422
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 124.1,
+            "bias_xyz_mm": [
+              -3.3,
+              21.8,
+              10.3
+            ],
+            "teleport_frames": 32,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 150.0,
+            "final_pos_m": [
+              0.3982,
+              0.2254,
+              0.42
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 120.8,
+            "bias_xyz_mm": [
+              10.9,
+              -13.1,
+              10.8
+            ],
+            "teleport_frames": 31,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 150.0,
+            "final_pos_m": [
+              0.4218,
+              -0.0593,
+              0.42
+            ]
+          }
+        },
+        "core_force_spikes": [
+          {
+            "step": 412,
+            "t": 2.065,
+            "force_n": 23.2
+          }
+        ],
+        "phase_timeline": [
+          [
+            0.0,
+            "HOVER_OVER_CORE"
+          ],
+          [
+            0.5,
+            "LUNGE_STRAIGHT_DOWN"
+          ],
+          [
+            1.6,
+            "CLOSE_GRIPPER"
+          ],
+          [
+            2.0,
+            "CARRY_TO_HOPPER"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 128.0mm, bias xyz [7.6, -10.3, 20.5]mm, 33/40 frames >50mm, err while occluded 150.0mm",
+          "rubble_a: mean 3D err 124.1mm, bias xyz [-3.3, 21.8, 10.3]mm, 32/40 frames >50mm, err while occluded 150.0mm",
+          "rubble_b: mean 3D err 120.8mm, bias xyz [10.9, -13.1, 10.8]mm, 31/40 frames >50mm, err while occluded 150.0mm",
+          "core contact force 23.2N at t=2.06s (gated, > 18.0N)",
+          "only 1/2 rubble boulders cleared; last phase 'CARRY_TO_HOPPER'",
+          "core NOT extracted: final xy [0.45, 0.002] speed 0.000 m/s (hopper [0.52, 0.16])"
+        ]
+      },
+      "22": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 116.4,
+            "bias_xyz_mm": [
+              3.7,
+              -9.8,
+              23.3
+            ],
+            "teleport_frames": 29,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 110.3,
+            "final_pos_m": [
+              0.4157,
+              -0.0389,
+              0.422
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 121.1,
+            "bias_xyz_mm": [
+              10.4,
+              54.5,
+              -48.1
+            ],
+            "teleport_frames": 37,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 110.5,
+            "final_pos_m": [
+              0.3704,
+              -0.0302,
+              0.436
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 150.0,
+            "bias_xyz_mm": [
+              NaN,
+              NaN,
+              NaN
+            ],
+            "teleport_frames": 40,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 150.0,
+            "final_pos_m": [
+              0.4189,
+              -0.0951,
+              0.4374
+            ]
+          }
+        },
+        "core_force_spikes": [
+          {
+            "step": 170,
+            "t": 0.855,
+            "force_n": 20.4
+          },
+          {
+            "step": 185,
+            "t": 0.93,
+            "force_n": 18.1
+          },
+          {
+            "step": 320,
+            "t": 1.605,
+            "force_n": 20.4
+          }
+        ],
+        "phase_timeline": [
+          [
+            0.0,
+            "HOVER_OVER_CORE"
+          ],
+          [
+            0.5,
+            "LUNGE_STRAIGHT_DOWN"
+          ],
+          [
+            1.6,
+            "CLOSE_GRIPPER"
+          ],
+          [
+            2.0,
+            "CARRY_TO_HOPPER"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 116.4mm, bias xyz [3.7, -9.8, 23.3]mm, 29/40 frames >50mm, err while occluded 110.3mm",
+          "rubble_a: mean 3D err 121.1mm, bias xyz [10.4, 54.5, -48.1]mm, 37/40 frames >50mm, err while occluded 110.5mm",
+          "rubble_b: mean 3D err 150.0mm, bias xyz [nan, nan, nan]mm, 40/40 frames >50mm, err while occluded 150.0mm",
+          "core contact force 20.4N at t=0.86s (gated, > 18.0N)",
+          "core contact force 18.1N at t=0.93s (gated, > 18.0N)",
+          "core contact force 20.4N at t=1.60s (gated, > 18.0N)",
+          "only 0/2 rubble boulders cleared; last phase 'CARRY_TO_HOPPER'",
+          "core NOT extracted: final xy [0.416, -0.039] speed 0.000 m/s (hopper [0.52, 0.16])"
+        ]
+      },
+      "33": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 122.6,
+            "bias_xyz_mm": [
+              9.2,
+              -14.4,
+              21.8
+            ],
+            "teleport_frames": 31,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 141.7,
+            "final_pos_m": [
+              0.3942,
+              -0.035,
+              0.422
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 132.1,
+            "bias_xyz_mm": [
+              15.1,
+              -54.4,
+              0.3
+            ],
+            "teleport_frames": 40,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 150.0,
+            "final_pos_m": [
+              0.4182,
+              0.1124,
+              0.424
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 106.4,
+            "bias_xyz_mm": [
+              -6.8,
+              3.0,
+              31.1
+            ],
+            "teleport_frames": 25,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 95.1,
+            "final_pos_m": [
+              0.384,
+              -0.0889,
+              0.4372
+            ]
+          }
+        },
+        "core_force_spikes": [
+          {
+            "step": 133,
+            "t": 0.67,
+            "force_n": 38.5
+          },
+          {
+            "step": 216,
+            "t": 1.085,
+            "force_n": 36.4
+          },
+          {
+            "step": 239,
+            "t": 1.2,
+            "force_n": 26.7
+          },
+          {
+            "step": 417,
+            "t": 2.09,
+            "force_n": 27.2
+          }
+        ],
+        "phase_timeline": [
+          [
+            0.0,
+            "HOVER_OVER_CORE"
+          ],
+          [
+            0.5,
+            "LUNGE_STRAIGHT_DOWN"
+          ],
+          [
+            1.6,
+            "CLOSE_GRIPPER"
+          ],
+          [
+            2.0,
+            "CARRY_TO_HOPPER"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 122.6mm, bias xyz [9.2, -14.4, 21.8]mm, 31/40 frames >50mm, err while occluded 141.7mm",
+          "rubble_a: mean 3D err 132.1mm, bias xyz [15.1, -54.4, 0.3]mm, 40/40 frames >50mm, err while occluded 150.0mm",
+          "rubble_b: mean 3D err 106.4mm, bias xyz [-6.8, 3.0, 31.1]mm, 25/40 frames >50mm, err while occluded 95.1mm",
+          "core contact force 38.5N at t=0.67s (gated, > 18.0N)",
+          "core contact force 36.4N at t=1.08s (gated, > 18.0N)",
+          "core contact force 26.7N at t=1.20s (gated, > 18.0N)",
+          "core contact force 27.2N at t=2.09s (gated, > 18.0N)",
+          "only 1/2 rubble boulders cleared; last phase 'CARRY_TO_HOPPER'",
+          "core NOT extracted: final xy [0.394, -0.035] speed 0.000 m/s (hopper [0.52, 0.16])"
+        ]
+      }
+    },
+    "generation": 0,
+    "shared_brain_tokens": 156,
+    "conflicts_prevented": 0,
+    "context_efficiency_gain": 0,
+    "decision": "CONTINUE"
+  },
+  {
+    "version": 1,
+    "source": "fallback_patch:v1_hsv_iqr_z_ordering",
+    "contract_id": "g1-a92ff294",
+    "opt": {
+      "vision_3d_rmse_mm": 18.68,
+      "rubble_cleared_count": 0.67,
+      "peak_core_contact_force_n": 14.95,
+      "composite_score": 30.59,
+      "core_shattered": false,
+      "core_extracted": false,
+      "extraction_rate": 0.0,
+      "max_wrist_force_n": 15.33,
+      "vision_latency_p99_ms": 9.79,
+      "force_ok_25": true,
+      "passed": false
+    },
+    "holdout": {
+      "vision_3d_rmse_mm": 16.36,
+      "rubble_cleared_count": 0.33,
+      "peak_core_contact_force_n": 5.4,
+      "composite_score": 32.31,
+      "core_shattered": false,
+      "core_extracted": false,
+      "extraction_rate": 0.0,
+      "max_wrist_force_n": 15.43,
+      "vision_latency_p99_ms": 9.83,
+      "force_ok_25": true,
+      "passed": false
+    },
+    "accepted": true,
+    "reasons": [],
+    "timestamp": "2026-10-17T21:05:06+00:00",
+    "sha256": "3d26e0d04c65f7a0eeb116f511d9be87d0cba2857933dcf5aef78ab9657f8da9",
+    "path": "workspace/versions/v1.py",
+    "autopsy": {
+      "11": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 16.1,
+            "bias_xyz_mm": [
+              13.8,
+              -6.9,
+              0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 17.5,
+            "final_pos_m": [
+              0.406,
+              -0.0358,
+              0.4219
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 19.1,
+            "bias_xyz_mm": [
+              -6.3,
+              6.7,
+              -0.4
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 16.7,
+            "final_pos_m": [
+              0.3863,
+              -0.025,
+              0.4638
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 13.3,
+            "bias_xyz_mm": [
+              -1.9,
+              11.0,
+              4.5
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 11.1,
+            "final_pos_m": [
+              0.4374,
+              -0.0848,
+              0.4366
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            1.8,
+            "DESCEND:rubble_a"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 16.1mm, bias xyz [13.8, -6.9, 0.1]mm, 0/40 frames >50mm, err while occluded 17.5mm",
+          "rubble_a: mean 3D err 19.1mm, bias xyz [-6.3, 6.7, -0.4]mm, 0/40 frames >50mm, err while occluded 16.7mm",
+          "rubble_b: mean 3D err 13.3mm, bias xyz [-1.9, 11.0, 4.5]mm, 0/40 frames >50mm, err while occluded 11.1mm",
+          "only 0/2 rubble boulders cleared; last phase 'DESCEND:rubble_a'",
+          "core NOT extracted: final xy [0.406, -0.036] speed 0.000 m/s (hopper [0.52, 0.16])"
+        ]
+      },
+      "22": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 15.4,
+            "bias_xyz_mm": [
+              9.9,
+              -11.7,
+              0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 15.6,
+            "final_pos_m": [
+              0.4165,
+              -0.0382,
+              0.422
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 23.3,
+            "bias_xyz_mm": [
+              -13.9,
+              0.7,
+              0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 28.4,
+            "final_pos_m": [
+              0.2808,
+              -0.1613,
+              0.42
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 17.9,
+            "bias_xyz_mm": [
+              7.3,
+              11.5,
+              9.4
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 18.9,
+            "final_pos_m": [
+              0.4179,
+              -0.0962,
+              0.4367
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            1.8,
+            "DESCEND:rubble_a"
+          ],
+          [
+            5.55,
+            "GRASP:rubble_a"
+          ],
+          [
+            5.75,
+            "LIFT:rubble_a"
+          ],
+          [
+            6.0,
+            "TRANSPORT:rubble_a"
+          ],
+          [
+            6.4,
+            "PLACE:rubble_a"
+          ],
+          [
+            6.75,
+            "RELEASE:rubble_a"
+          ],
+          [
+            6.9,
+            "RETREAT:rubble_a"
+          ],
+          [
+            7.15,
+            "APPROACH:rubble_b"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 15.4mm, bias xyz [9.9, -11.7, 0.1]mm, 0/40 frames >50mm, err while occluded 15.6mm",
+          "rubble_a: mean 3D err 23.3mm, bias xyz [-13.9, 0.7, 0.1]mm, 0/40 frames >50mm, err while occluded 28.4mm",
+          "rubble_b: mean 3D err 17.9mm, bias xyz [7.3, 11.5, 9.4]mm, 0/40 frames >50mm, err while occluded 18.9mm",
+          "only 1/2 rubble boulders cleared; last phase 'APPROACH:rubble_b'",
+          "core NOT extracted: final xy [0.416, -0.038] speed 0.000 m/s (hopper [0.52, 0.16])"
+        ]
+      },
+      "33": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 20.1,
+            "bias_xyz_mm": [
+              10.8,
+              -12.6,
+              0.4
+            ],
+            "teleport_frames": 1,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 16.8,
+            "final_pos_m": [
+              0.3946,
+              -0.0344,
+              0.4217
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 27.5,
+            "bias_xyz_mm": [
+              26.7,
+              6.1,
+              0.2
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 27.2,
+            "final_pos_m": [
+              0.271,
+              -0.1601,
+              0.42
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 15.3,
+            "bias_xyz_mm": [
+              8.4,
+              11.1,
+              5.8
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 15.0,
+            "final_pos_m": [
+              0.3855,
+              -0.0884,
+              0.4372
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            1.55,
+            "DESCEND:rubble_a"
+          ],
+          [
+            2.5,
+            "GRASP:rubble_a"
+          ],
+          [
+            2.7,
+            "LIFT:rubble_a"
+          ],
+          [
+            2.95,
+            "TRANSPORT:rubble_a"
+          ],
+          [
+            3.35,
+            "PLACE:rubble_a"
+          ],
+          [
+            3.7,
+            "RELEASE:rubble_a"
+          ],
+          [
+            3.85,
+            "RETREAT:rubble_a"
+          ],
+          [
+            4.1,
+            "APPROACH:rubble_b"
+          ],
+          [
+            4.75,
+            "DESCEND:rubble_b"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 20.1mm, bias xyz [10.8, -12.6, 0.4]mm, 1/40 frames >50mm, err while occluded 16.8mm",
+          "rubble_a: mean 3D err 27.5mm, bias xyz [26.7, 6.1, 0.2]mm, 0/40 frames >50mm, err while occluded 27.2mm",
+          "rubble_b: mean 3D err 15.3mm, bias xyz [8.4, 11.1, 5.8]mm, 0/40 frames >50mm, err while occluded 15.0mm",
+          "only 1/2 rubble boulders cleared; last phase 'DESCEND:rubble_b'",
+          "core NOT extracted: final xy [0.395, -0.034] speed 0.007 m/s (hopper [0.52, 0.16])"
+        ]
+      }
+    },
+    "generation": 1,
+    "shared_brain_tokens": 276,
+    "conflicts_prevented": 0,
+    "context_efficiency_gain": 766,
+    "decision": "CONTINUE"
+  },
+  {
+    "version": 2,
+    "source": "fallback_patch:v2_yaw_tracker",
+    "contract_id": "g2-19eea010",
+    "opt": {
+      "vision_3d_rmse_mm": 15.99,
+      "rubble_cleared_count": 0.33,
+      "peak_core_contact_force_n": 18.41,
+      "composite_score": 27.42,
+      "core_shattered": true,
+      "core_extracted": false,
+      "extraction_rate": 0.0,
+      "max_wrist_force_n": 24.1,
+      "vision_latency_p99_ms": 10.35,
+      "force_ok_25": true,
+      "passed": false
+    },
+    "holdout": {
+      "vision_3d_rmse_mm": 13.73,
+      "rubble_cleared_count": 1.33,
+      "peak_core_contact_force_n": 14.97,
+      "composite_score": 43.06,
+      "core_shattered": true,
+      "core_extracted": false,
+      "extraction_rate": 0.0,
+      "max_wrist_force_n": 18.82,
+      "vision_latency_p99_ms": 9.76,
+      "force_ok_25": true,
+      "passed": false
+    },
+    "accepted": false,
+    "reasons": [
+      "opt composite 27.42 not > 30.59",
+      "core shattered"
+    ],
+    "timestamp": "2026-10-17T21:14:20+00:00",
+    "sha256": "16fd206c441fece6b93dd638c15988a708f53ca0ed9038184c8e20d843dd87b7",
+    "path": "workspace/versions/candidate_g2.py",
+    "autopsy": {
+      "11": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 14.1,
+            "bias_xyz_mm": [
+              10.8,
+              -9.0,
+              0.2
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 14.3,
+            "final_pos_m": [
+              0.4065,
+              -0.0358,
+              0.4219
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 13.9,
+            "bias_xyz_mm": [
+              -7.5,
+              -6.3,
+              -0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 11.9,
+            "final_pos_m": [
+              0.3086,
+              -0.1559,
+              0.42
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 10.5,
+            "bias_xyz_mm": [
+              -4.0,
+              8.7,
+              4.0
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 10.6,
+            "final_pos_m": [
+              0.4356,
+              -0.0825,
+              0.4373
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            1.65,
+            "DESCEND:rubble_a"
+          ],
+          [
+            3.55,
+            "GRASP:rubble_a"
+          ],
+          [
+            3.8,
+            "LIFT:rubble_a"
+          ],
+          [
+            4.05,
+            "TRANSPORT:rubble_a"
+          ],
+          [
+            4.4,
+            "PLACE:rubble_a"
+          ],
+          [
+            5.15,
+            "RELEASE:rubble_a"
+          ],
+          [
+            5.3,
+            "RETREAT:rubble_a"
+          ],
+          [
+            5.55,
+            "APPROACH:rubble_b"
+          ],
+          [
+            5.95,
+            "DESCEND:rubble_b"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 14.1mm, bias xyz [10.8, -9.0, 0.2]mm, 0/40 frames >50mm, err while occluded 14.3mm",
+          "rubble_a: mean 3D err 13.9mm, bias xyz [-7.5, -6.3, -0.1]mm, 0/40 frames >50mm, err while occluded 11.9mm",
+          "rubble_b: mean 3D err 10.5mm, bias xyz [-4.0, 8.7, 4.0]mm, 0/40 frames >50mm, err while occluded 10.6mm",
+          "only 1/2 rubble boulders cleared; last phase 'DESCEND:rubble_b'",
+          "core NOT extracted: final xy [0.406, -0.036] speed 0.000 m/s (hopper [0.52, 0.16])"
+        ]
+      },
+      "22": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 15.7,
+            "bias_xyz_mm": [
+              9.4,
+              -12.5,
+              0.0
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 15.9,
+            "final_pos_m": [
+              0.4264,
+              -0.0422,
+              0.4219
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 9.2,
+            "bias_xyz_mm": [
+              -3.3,
+              2.1,
+              0.0
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 9.2,
+            "final_pos_m": [
+              0.3988,
+              -0.0194,
+              0.4649
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 14.2,
+            "bias_xyz_mm": [
+              2.7,
+              12.2,
+              5.6
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 16.6,
+            "final_pos_m": [
+              0.4182,
+              -0.1212,
+              0.432
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            1.75,
+            "DESCEND:rubble_a"
+          ],
+          [
+            10.8,
+            "GRASP:rubble_a"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 15.7mm, bias xyz [9.4, -12.5, 0.0]mm, 0/40 frames >50mm, err while occluded 15.9mm",
+          "rubble_a: mean 3D err 9.2mm, bias xyz [-3.3, 2.1, 0.0]mm, 0/40 frames >50mm, err while occluded 9.2mm",
+          "rubble_b: mean 3D err 14.2mm, bias xyz [2.7, 12.2, 5.6]mm, 0/40 frames >50mm, err while occluded 16.6mm",
+          "only 0/2 rubble boulders cleared; last phase 'GRASP:rubble_a'",
+          "core NOT extracted: final xy [0.426, -0.042] speed 0.000 m/s (hopper [0.52, 0.16])"
+        ]
+      },
+      "33": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 20.5,
+            "bias_xyz_mm": [
+              10.6,
+              -13.5,
+              0.3
+            ],
+            "teleport_frames": 1,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 17.4,
+            "final_pos_m": [
+              0.3968,
+              -0.035,
+              0.4216
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 28.7,
+            "bias_xyz_mm": [
+              28.4,
+              4.1,
+              0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 28.6,
+            "final_pos_m": [
+              0.3814,
+              -0.0124,
+              0.4649
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 17.0,
+            "bias_xyz_mm": [
+              6.3,
+              14.8,
+              5.2
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 17.0,
+            "final_pos_m": [
+              0.3831,
+              -0.0873,
+              0.4374
+            ]
+          }
+        },
+        "core_force_spikes": [
+          {
+            "step": 348,
+            "t": 1.745,
+            "force_n": 24.9
+          }
+        ],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            1.55,
+            "DESCEND:rubble_a"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 20.5mm, bias xyz [10.6, -13.5, 0.3]mm, 1/40 frames >50mm, err while occluded 17.4mm",
+          "rubble_a: mean 3D err 28.7mm, bias xyz [28.4, 4.1, 0.1]mm, 0/40 frames >50mm, err while occluded 28.6mm",
+          "rubble_b: mean 3D err 17.0mm, bias xyz [6.3, 14.8, 5.2]mm, 0/40 frames >50mm, err while occluded 17.0mm",
+          "core contact force 24.9N at t=1.74s (gated, > 18.0N)",
+          "only 0/2 rubble boulders cleared; last phase 'DESCEND:rubble_a'",
+          "core NOT extracted: final xy [0.397, -0.035] speed 0.003 m/s (hopper [0.52, 0.16])"
+        ]
+      }
+    },
+    "generation": 2,
+    "shared_brain_tokens": 276,
+    "conflicts_prevented": 0,
+    "context_efficiency_gain": 490,
+    "decision": "ROLLBACK_DRIFT"
+  },
+  {
+    "version": 3,
+    "source": "llm:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+    "contract_id": "g3-30c70db3",
+    "opt": {
+      "vision_3d_rmse_mm": 18.68,
+      "rubble_cleared_count": 0.67,
+      "peak_core_contact_force_n": 14.95,
+      "composite_score": 30.57,
+      "core_shattered": false,
+      "core_extracted": false,
+      "extraction_rate": 0.0,
+      "max_wrist_force_n": 15.33,
+      "vision_latency_p99_ms": 10.08,
+      "force_ok_25": true,
+      "passed": false
+    },
+    "holdout": {
+      "vision_3d_rmse_mm": 16.36,
+      "rubble_cleared_count": 0.33,
+      "peak_core_contact_force_n": 5.4,
+      "composite_score": 32.28,
+      "core_shattered": false,
+      "core_extracted": false,
+      "extraction_rate": 0.0,
+      "max_wrist_force_n": 15.43,
+      "vision_latency_p99_ms": 9.66,
+      "force_ok_25": true,
+      "passed": false
+    },
+    "accepted": false,
+    "reasons": [
+      "opt composite 30.57 not > 30.59",
+      "holdout composite 32.28 < 32.31"
+    ],
+    "timestamp": "2026-10-17T21:20:23+00:00",
+    "sha256": "9c58d8a48284df9c575a203037e92c94f1badea1bb42b95b611a4a96763963bf",
+    "path": "workspace/versions/candidate_g3_llm.py",
+    "autopsy": {
+      "11": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 16.1,
+            "bias_xyz_mm": [
+              13.8,
+              -6.9,
+              0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 17.5,
+            "final_pos_m": [
+              0.406,
+              -0.0358,
+              0.4219
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 19.1,
+            "bias_xyz_mm": [
+              -6.3,
+              6.7,
+              -0.4
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 16.7,
+            "final_pos_m": [
+              0.3863,
+              -0.025,
+              0.4638
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 13.3,
+            "bias_xyz_mm": [
+              -1.9,
+              11.0,
+              4.5
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 11.1,
+            "final_pos_m": [
+              0.4374,
+              -0.0848,
+              0.4366
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            1.8,
+            "DESCEND:rubble_a"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 16.1mm, bias xyz [13.8, -6.9, 0.1]mm, 0/40 frames >50mm, err while occluded 17.5mm",
+          "rubble_a: mean 3D err 19.1mm, bias xyz [-6.3, 6.7, -0.4]mm, 0/40 frames >50mm, err while occluded 16.7mm",
+          "rubble_b: mean 3D err 13.3mm, bias xyz [-1.9, 11.0, 4.5]mm, 0/40 frames >50mm, err while occluded 11.1mm",
+          "only 0/2 rubble boulders cleared; last phase 'DESCEND:rubble_a'",
+          "core NOT extracted: final xy [0.406, -0.036] speed 0.000 m/s (hopper [0.52, 0.16])"
+        ]
+      },
+      "22": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 15.4,
+            "bias_xyz_mm": [
+              9.9,
+              -11.7,
+              0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 15.6,
+            "final_pos_m": [
+              0.4165,
+              -0.0382,
+              0.422
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 23.3,
+            "bias_xyz_mm": [
+              -13.9,
+              0.7,
+              0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 28.4,
+            "final_pos_m": [
+              0.2808,
+              -0.1613,
+              0.42
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 17.9,
+            "bias_xyz_mm": [
+              7.3,
+              11.5,
+              9.4
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 18.9,
+            "final_pos_m": [
+              0.4179,
+              -0.0962,
+              0.4367
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            1.8,
+            "DESCEND:rubble_a"
+          ],
+          [
+            5.55,
+            "GRASP:rubble_a"
+          ],
+          [
+            5.75,
+            "LIFT:rubble_a"
+          ],
+          [
+            6.0,
+            "TRANSPORT:rubble_a"
+          ],
+          [
+            6.4,
+            "PLACE:rubble_a"
+          ],
+          [
+            6.75,
+            "RELEASE:rubble_a"
+          ],
+          [
+            6.9,
+            "RETREAT:rubble_a"
+          ],
+          [
+            7.15,
+            "APPROACH:rubble_b"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 15.4mm, bias xyz [9.9, -11.7, 0.1]mm, 0/40 frames >50mm, err while occluded 15.6mm",
+          "rubble_a: mean 3D err 23.3mm, bias xyz [-13.9, 0.7, 0.1]mm, 0/40 frames >50mm, err while occluded 28.4mm",
+          "rubble_b: mean 3D err 17.9mm, bias xyz [7.3, 11.5, 9.4]mm, 0/40 frames >50mm, err while occluded 18.9mm",
+          "only 1/2 rubble boulders cleared; last phase 'APPROACH:rubble_b'",
+          "core NOT extracted: final xy [0.416, -0.038] speed 0.000 m/s (hopper [0.52, 0.16])"
+        ]
+      },
+      "33": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 20.1,
+            "bias_xyz_mm": [
+              10.8,
+              -12.6,
+              0.4
+            ],
+            "teleport_frames": 1,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 16.8,
+            "final_pos_m": [
+              0.3946,
+              -0.0344,
+              0.4217
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 27.5,
+            "bias_xyz_mm": [
+              26.7,
+              6.1,
+              0.2
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 27.2,
+            "final_pos_m": [
+              0.271,
+              -0.1601,
+              0.42
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 15.3,
+            "bias_xyz_mm": [
+              8.4,
+              11.1,
+              5.8
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 15.0,
+            "final_pos_m": [
+              0.3855,
+              -0.0884,
+              0.4372
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            1.55,
+            "DESCEND:rubble_a"
+          ],
+          [
+            2.5,
+            "GRASP:rubble_a"
+          ],
+          [
+            2.7,
+            "LIFT:rubble_a"
+          ],
+          [
+            2.95,
+            "TRANSPORT:rubble_a"
+          ],
+          [
+            3.35,
+            "PLACE:rubble_a"
+          ],
+          [
+            3.7,
+            "RELEASE:rubble_a"
+          ],
+          [
+            3.85,
+            "RETREAT:rubble_a"
+          ],
+          [
+            4.1,
+            "APPROACH:rubble_b"
+          ],
+          [
+            4.75,
+            "DESCEND:rubble_b"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 20.1mm, bias xyz [10.8, -12.6, 0.4]mm, 1/40 frames >50mm, err while occluded 16.8mm",
+          "rubble_a: mean 3D err 27.5mm, bias xyz [26.7, 6.1, 0.2]mm, 0/40 frames >50mm, err while occluded 27.2mm",
+          "rubble_b: mean 3D err 15.3mm, bias xyz [8.4, 11.1, 5.8]mm, 0/40 frames >50mm, err while occluded 15.0mm",
+          "only 1/2 rubble boulders cleared; last phase 'DESCEND:rubble_b'",
+          "core NOT extracted: final xy [0.395, -0.034] speed 0.007 m/s (hopper [0.52, 0.16])"
+        ]
+      }
+    },
+    "generation": 3,
+    "shared_brain_tokens": 303,
+    "conflicts_prevented": 0,
+    "context_efficiency_gain": 187,
+    "decision": "ROLLBACK_DRIFT"
+  },
+  {
+    "version": 4,
+    "source": "fallback_patch:v3_force_guard_gentle_place",
+    "contract_id": "g3-30c70db3",
+    "opt": {
+      "vision_3d_rmse_mm": 16.55,
+      "rubble_cleared_count": 2.0,
+      "peak_core_contact_force_n": 10.52,
+      "composite_score": 82.02,
+      "core_shattered": false,
+      "core_extracted": true,
+      "extraction_rate": 1.0,
+      "max_wrist_force_n": 14.64,
+      "vision_latency_p99_ms": 10.29,
+      "force_ok_25": true,
+      "passed": true
+    },
+    "holdout": {
+      "vision_3d_rmse_mm": 13.99,
+      "rubble_cleared_count": 2.0,
+      "peak_core_contact_force_n": 7.81,
+      "composite_score": 85.54,
+      "core_shattered": false,
+      "core_extracted": true,
+      "extraction_rate": 1.0,
+      "max_wrist_force_n": 13.31,
+      "vision_latency_p99_ms": 9.89,
+      "force_ok_25": true,
+      "passed": true
+    },
+    "accepted": true,
+    "reasons": [
+      "note: RMSE 16.6 mm above sub-contract target 9.3 mm"
+    ],
+    "timestamp": "2026-10-17T21:21:22+00:00",
+    "sha256": "601d8825913e741e2069f49fd1036198001ecfa432e244ac34b5bb8f3d0af97b",
+    "path": "workspace/versions/v4.py",
+    "autopsy": {
+      "11": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 14.1,
+            "bias_xyz_mm": [
+              10.6,
+              -9.1,
+              0.3
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 14.3,
+            "final_pos_m": [
+              0.5222,
+              0.1537,
+              0.425
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 14.6,
+            "bias_xyz_mm": [
+              -8.9,
+              -10.3,
+              -0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 11.9,
+            "final_pos_m": [
+              0.2853,
+              -0.155,
+              0.4368
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 11.8,
+            "bias_xyz_mm": [
+              -4.2,
+              10.1,
+              3.2
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 10.6,
+            "final_pos_m": [
+              0.2229,
+              -0.1923,
+              0.4323
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_b"
+          ],
+          [
+            1.75,
+            "DESCEND:rubble_b"
+          ],
+          [
+            2.5,
+            "GRASP:rubble_b"
+          ],
+          [
+            2.95,
+            "LIFT:rubble_b"
+          ],
+          [
+            3.2,
+            "TRANSPORT:rubble_b"
+          ],
+          [
+            3.65,
+            "PLACE:rubble_b"
+          ],
+          [
+            4.1,
+            "RELEASE:rubble_b"
+          ],
+          [
+            4.25,
+            "RETREAT:rubble_b"
+          ],
+          [
+            4.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            5.2,
+            "DESCEND:rubble_a"
+          ],
+          [
+            5.65,
+            "GRASP:rubble_a"
+          ],
+          [
+            6.05,
+            "LIFT:rubble_a"
+          ],
+          [
+            6.3,
+            "TRANSPORT:rubble_a"
+          ],
+          [
+            6.7,
+            "PLACE:rubble_a"
+          ],
+          [
+            7.15,
+            "RELEASE:rubble_a"
+          ],
+          [
+            7.3,
+            "RETREAT:rubble_a"
+          ],
+          [
+            7.5,
+            "APPROACH:core"
+          ],
+          [
+            7.9,
+            "DESCEND:core"
+          ],
+          [
+            8.4,
+            "GRASP:core"
+          ],
+          [
+            8.85,
+            "LIFT:core"
+          ],
+          [
+            9.1,
+            "TRANSPORT:core"
+          ],
+          [
+            9.55,
+            "PLACE:core"
+          ],
+          [
+            10.1,
+            "RELEASE:core"
+          ],
+          [
+            10.25,
+            "RETREAT:core"
+          ],
+          [
+            10.5,
+            "DONE:-"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 14.1mm, bias xyz [10.6, -9.1, 0.3]mm, 0/40 frames >50mm, err while occluded 14.3mm",
+          "rubble_a: mean 3D err 14.6mm, bias xyz [-8.9, -10.3, -0.1]mm, 0/40 frames >50mm, err while occluded 11.9mm",
+          "rubble_b: mean 3D err 11.8mm, bias xyz [-4.2, 10.1, 3.2]mm, 0/40 frames >50mm, err while occluded 10.6mm"
+        ]
+      },
+      "22": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 15.5,
+            "bias_xyz_mm": [
+              9.0,
+              -12.5,
+              0.0
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 15.9,
+            "final_pos_m": [
+              0.5313,
+              0.1547,
+              0.425
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 9.0,
+            "bias_xyz_mm": [
+              -4.0,
+              2.4,
+              0.0
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 9.2,
+            "final_pos_m": [
+              0.3807,
+              0.0477,
+              0.42
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 17.5,
+            "bias_xyz_mm": [
+              2.7,
+              16.0,
+              5.5
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 16.6,
+            "final_pos_m": [
+              0.223,
+              -0.1997,
+              0.432
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_b"
+          ],
+          [
+            1.7,
+            "DESCEND:rubble_b"
+          ],
+          [
+            1.95,
+            "GRASP:rubble_b"
+          ],
+          [
+            2.4,
+            "LIFT:rubble_b"
+          ],
+          [
+            2.6,
+            "APPROACH:rubble_b"
+          ],
+          [
+            2.95,
+            "DESCEND:rubble_b"
+          ],
+          [
+            3.45,
+            "GRASP:rubble_b"
+          ],
+          [
+            3.9,
+            "LIFT:rubble_b"
+          ],
+          [
+            4.15,
+            "APPROACH:rubble_b"
+          ],
+          [
+            4.55,
+            "DESCEND:rubble_b"
+          ],
+          [
+            5.0,
+            "GRASP:rubble_b"
+          ],
+          [
+            5.4,
+            "LIFT:rubble_b"
+          ],
+          [
+            5.65,
+            "TRANSPORT:rubble_b"
+          ],
+          [
+            6.05,
+            "PLACE:rubble_b"
+          ],
+          [
+            6.5,
+            "RELEASE:rubble_b"
+          ],
+          [
+            6.65,
+            "RETREAT:rubble_b"
+          ],
+          [
+            6.85,
+            "APPROACH:rubble_a"
+          ],
+          [
+            6.9,
+            "APPROACH:core"
+          ],
+          [
+            7.35,
+            "DESCEND:core"
+          ],
+          [
+            7.9,
+            "GRASP:core"
+          ],
+          [
+            8.3,
+            "LIFT:core"
+          ],
+          [
+            8.6,
+            "TRANSPORT:core"
+          ],
+          [
+            9.0,
+            "PLACE:core"
+          ],
+          [
+            9.55,
+            "RELEASE:core"
+          ],
+          [
+            9.7,
+            "RETREAT:core"
+          ],
+          [
+            9.95,
+            "DONE:-"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 15.5mm, bias xyz [9.0, -12.5, 0.0]mm, 0/40 frames >50mm, err while occluded 15.9mm",
+          "rubble_a: mean 3D err 9.0mm, bias xyz [-4.0, 2.4, 0.0]mm, 0/40 frames >50mm, err while occluded 9.2mm",
+          "rubble_b: mean 3D err 17.5mm, bias xyz [2.7, 16.0, 5.5]mm, 0/40 frames >50mm, err while occluded 16.6mm"
+        ]
+      },
+      "33": {
+        "objects": {
+          "core": {
+            "mean_err_mm": 20.0,
+            "bias_xyz_mm": [
+              9.7,
+              -13.3,
+              0.3
+            ],
+            "teleport_frames": 1,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 17.4,
+            "final_pos_m": [
+              0.5091,
+              0.1594,
+              0.425
+            ]
+          },
+          "rubble_a": {
+            "mean_err_mm": 28.7,
+            "bias_xyz_mm": [
+              28.3,
+              4.3,
+              0.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 28.6,
+            "final_pos_m": [
+              0.3662,
+              0.0478,
+              0.424
+            ]
+          },
+          "rubble_b": {
+            "mean_err_mm": 17.8,
+            "bias_xyz_mm": [
+              6.1,
+              15.4,
+              4.1
+            ],
+            "teleport_frames": 0,
+            "frames_scored": 40,
+            "occluded_mean_err_mm": 17.0,
+            "final_pos_m": [
+              0.2111,
+              -0.2431,
+              0.432
+            ]
+          }
+        },
+        "core_force_spikes": [],
+        "phase_timeline": [
+          [
+            0.0,
+            "SURVEY:-"
+          ],
+          [
+            1.45,
+            "APPROACH:rubble_b"
+          ],
+          [
+            1.7,
+            "DESCEND:rubble_b"
+          ],
+          [
+            2.2,
+            "GRASP:rubble_b"
+          ],
+          [
+            2.6,
+            "LIFT:rubble_b"
+          ],
+          [
+            2.85,
+            "TRANSPORT:rubble_b"
+          ],
+          [
+            3.25,
+            "PLACE:rubble_b"
+          ],
+          [
+            3.7,
+            "RELEASE:rubble_b"
+          ],
+          [
+            3.85,
+            "RETREAT:rubble_b"
+          ],
+          [
+            4.05,
+            "APPROACH:rubble_a"
+          ],
+          [
+            4.5,
+            "DESCEND:rubble_a"
+          ],
+          [
+            4.8,
+            "GRASP:rubble_a"
+          ],
+          [
+            5.25,
+            "LIFT:rubble_a"
+          ],
+          [
+            5.45,
+            "APPROACH:rubble_a"
+          ],
+          [
+            5.6,
+            "DESCEND:rubble_a"
+          ],
+          [
+            6.05,
+            "GRASP:rubble_a"
+          ],
+          [
+            6.4,
+            "LIFT:rubble_a"
+          ],
+          [
+            6.65,
+            "APPROACH:rubble_a"
+          ],
+          [
+            6.7,
+            "APPROACH:core"
+          ],
+          [
+            7.05,
+            "DESCEND:core"
+          ],
+          [
+            8.2,
+            "GRASP:core"
+          ],
+          [
+            8.6,
+            "LIFT:core"
+          ],
+          [
+            8.85,
+            "TRANSPORT:core"
+          ],
+          [
+            9.3,
+            "PLACE:core"
+          ],
+          [
+            9.85,
+            "RELEASE:core"
+          ],
+          [
+            10.0,
+            "RETREAT:core"
+          ],
+          [
+            10.25,
+            "DONE:-"
+          ]
+        ],
+        "summary_lines": [
+          "core: mean 3D err 20.0mm, bias xyz [9.7, -13.3, 0.3]mm, 1/40 frames >50mm, err while occluded 17.4mm",
+          "rubble_a: mean 3D err 28.7mm, bias xyz [28.3, 4.3, 0.1]mm, 0/40 frames >50mm, err while occluded 28.6mm",
+          "rubble_b: mean 3D err 17.8mm, bias xyz [6.1, 15.4, 4.1]mm, 0/40 frames >50mm, err while occluded 17.0mm"
+        ]
+      }
+    },
+    "generation": 3,
+    "shared_brain_tokens": 399,
+    "conflicts_prevented": 0,
+    "context_efficiency_gain": 1287,
+    "decision": "STOP_DONE"
+  }
+]

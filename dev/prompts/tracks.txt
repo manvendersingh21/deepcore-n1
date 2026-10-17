@@ -1,0 +1,7 @@
+ASSIGNMENT (hackathon tracks wiring): edit main.py, agents/contract_orchestrator.py, shared_brain/memory_store.py, and add tests/test_tracks_unit.py. Do not edit core/ or agents/patches/.
+1) main.py run-evolution accepts --goal "<one line>"; it calls ContractOrchestrator.compile_goal(goal) first (writes shared_brain/generated_dod.json), then run(). Print DECISION per generation from decide(). 
+2) Ledger entries gain: "decision", "shared_brain_tokens" (memory_store estimate_tokens of playbook.md), "conflicts_prevented" (SharedBrain.conflicts_prevented()), "context_efficiency_gain" (tokens read from the graveyard vs a no-memory baseline; compute from transaction log, not a constant).
+3) After each accepted generation, write shared_brain/evolved_agent_prompts.json (versioned per agent: RootArchitect, VisionSpecialist, ControlSpecialist, IndependentVerifier) via SharedBrain.atomic_update.
+4) Record at least one rejected attempt in ledger.json with decision ROLLBACK_DRIFT or REPLAN.
+5) Print a before (v0) vs after (latest) table on holdout 101-103 in the CLI.
+Tests in tests/test_tracks_unit.py must be fully offline (fake evaluator); they must pass. Real Crusoe calls only where the code already makes them. Report files and test results.

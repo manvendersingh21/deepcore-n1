@@ -1,0 +1,50 @@
+{'composite_score': 35.31, 'rubble_cleared_count': 1, 'peak_core_contact_force_n': 11.76, 'max_wrist_force_n': 10.99, 'core_shattered': False, 'core_extracted': False, 'score_breakdown': {'vision': 13.39, 'clearance': 12.5, 'extraction': 0.0, 'safety': 6.24, 'latency': 3.17}}
+
+PEAK gated force 11.76 N at step 960 (sim t=4.805; episode t=3.805?)
+   k=954 t=4.775 DESCEND:rubble_a     gf=  3.84 wf=[ 0.83 -0.25 -2.95] ee=[ 0.4114 -0.0096  0.4981] core=[ 0.394  -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+   k=955 t=4.780 DESCEND:rubble_a     gf=  4.22 wf=[ 0.8  -0.08 -3.35] ee=[ 0.4113 -0.0096  0.4982] core=[ 0.394  -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+   k=956 t=4.785 DESCEND:rubble_a     gf=  4.97 wf=[ 0.88 -0.08 -4.1 ] ee=[ 0.4113 -0.0096  0.4982] core=[ 0.394  -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+   k=957 t=4.790 DESCEND:rubble_a     gf=  6.10 wf=[ 1.07 -0.15 -5.21] ee=[ 0.4113 -0.0096  0.4983] core=[ 0.3941 -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+   k=958 t=4.795 DESCEND:rubble_a     gf=  7.69 wf=[ 1.38 -0.29 -6.77] ee=[ 0.4113 -0.0096  0.4984] core=[ 0.3941 -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+   k=959 t=4.800 DESCEND:rubble_a     gf=  9.85 wf=[ 1.87 -0.57 -8.87] ee=[ 0.4112 -0.0096  0.4984] core=[ 0.3941 -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+>> k=960 t=4.805 GRASP:rubble_a       gf= 11.76 wf=[  2.24  -0.67 -10.74] ee=[ 0.4112 -0.0096  0.4983] core=[ 0.3941 -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+   k=961 t=4.810 GRASP:rubble_a       gf=  3.50 wf=[ 0.79 -0.07 -2.62] ee=[ 0.4112 -0.0096  0.4982] core=[ 0.394  -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+   k=962 t=4.815 GRASP:rubble_a       gf=  3.91 wf=[ 0.76  0.09 -3.05] ee=[ 0.4111 -0.0096  0.4982] core=[ 0.3941 -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+   k=963 t=4.820 GRASP:rubble_a       gf=  4.69 wf=[ 0.85  0.1  -3.83] ee=[ 0.4111 -0.0096  0.4983] core=[ 0.3941 -0.035   0.4217] grip=1.00 hand=['pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a', 'pad_right-rubble_a'] coreC=['pit_floor', 'rubble_a']
+
+PHASE TIMELINE (episode t, from rec.t):
+  t= 0.00 SURVEY:-               ee=[ 0.26  -0.27   0.679]
+  t= 1.45 APPROACH:rubble_b      ee=[0.42  0.    0.559]
+  t= 1.70 DESCEND:rubble_b       ee=[ 0.393 -0.067  0.559]
+  t= 2.20 GRASP:rubble_b         ee=[ 0.398 -0.068  0.465]
+  t= 2.60 LIFT:rubble_b          ee=[ 0.397 -0.068  0.464]
+  t= 2.85 TRANSPORT:rubble_b     ee=[ 0.398 -0.068  0.549]
+  t= 3.25 PLACE:rubble_b         ee=[ 0.223 -0.196  0.559]
+  t= 3.70 RELEASE:rubble_b       ee=[ 0.22  -0.2    0.495]
+  t= 3.85 RETREAT:rubble_b       ee=[ 0.22  -0.2    0.494]
+  t= 4.05 APPROACH:rubble_a      ee=[ 0.22  -0.2    0.544]
+  t= 4.50 DESCEND:rubble_a       ee=[ 0.409 -0.013  0.559]
+  t= 4.80 GRASP:rubble_a         ee=[ 0.411 -0.01   0.498]
+  t= 5.25 LIFT:rubble_a          ee=[ 0.41  -0.01   0.507]
+  t= 5.45 APPROACH:rubble_a      ee=[ 0.411 -0.01   0.55 ]
+  t= 5.60 DESCEND:rubble_a       ee=[ 0.411 -0.01   0.559]
+  t= 6.05 GRASP:rubble_a         ee=[ 0.411 -0.01   0.477]
+  t= 6.40 LIFT:rubble_a          ee=[ 0.411 -0.01   0.473]
+  t= 6.65 APPROACH:rubble_a      ee=[ 0.411 -0.01   0.551]
+  t= 6.70 APPROACH:core          ee=[ 0.411 -0.01   0.556]
+  t= 6.90 DESCEND:core           ee=[ 0.4   -0.045  0.559]
+  t= 8.05 GRASP:core             ee=[ 0.399 -0.048  0.427]
+  t= 8.45 LIFT:core              ee=[ 0.399 -0.048  0.424]
+  t= 8.75 APPROACH:core          ee=[ 0.399 -0.048  0.552]
+  t= 8.90 DESCEND:core           ee=[ 0.399 -0.048  0.559]
+  t=10.05 GRASP:core             ee=[ 0.399 -0.048  0.427]
+  t=10.45 LIFT:core              ee=[ 0.399 -0.048  0.424]
+  t=10.75 APPROACH:core          ee=[ 0.399 -0.048  0.551]
+  t=10.90 DESCEND:core           ee=[ 0.399 -0.048  0.559]
+
+FINAL:
+  core      pos=[ 0.3508 -0.0299  0.422 ] dist_from_core_xy=0.000 speed=0.000
+  rubble_a  pos=[0.3662 0.0478 0.424 ] dist_from_core_xy=0.079 speed=0.000
+  rubble_b  pos=[ 0.2111 -0.2431  0.432 ] dist_from_core_xy=0.255 speed=0.000
+GT at t=0: {'core': [0.3942, -0.035, 0.4219], 'rubble_a': [0.3828, -0.0141, 0.4638], 'rubble_b': [0.3829, -0.0881, 0.4375]}
+errors: []

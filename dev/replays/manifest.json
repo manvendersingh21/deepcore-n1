@@ -1,0 +1,64 @@
+{
+  "preserved_at": "2026-10-17T22:13:58.562638+00:00",
+  "source": "http://127.0.0.1:8080/api/recording",
+  "recordings": [
+    {
+      "version": "baseline",
+      "path": "dev/replays/baseline.json",
+      "bytes": 21711842,
+      "sha256": "73c28571371aba4f9610b80f98045ca54d88ee5843f169e38eaacf0bf614da02",
+      "frame_count": 221,
+      "provenance": "actual recorded MuJoCo rollout",
+      "policy_source": "baseline",
+      "seed": 101,
+      "result": {
+        "seed": 101,
+        "vision_3d_rmse_mm": 135.12,
+        "rubble_cleared_count": 0,
+        "peak_core_contact_force_n": 5.05,
+        "max_wrist_force_n": 4.55,
+        "core_shattered": false,
+        "core_extracted": false,
+        "vision_latency_p99_ms": 3.35,
+        "composite_score": 14.33,
+        "score_breakdown": {
+          "vision": 0.0,
+          "clearance": 0.0,
+          "extraction": 0.0,
+          "safety": 10.0,
+          "latency": 4.33
+        },
+        "force_ok_25": true
+      }
+    },
+    {
+      "version": "accepted",
+      "path": "dev/replays/accepted.json",
+      "bytes": 21224616,
+      "sha256": "ef02f4bba05b3cdf080a6d6c5458af24a3187c13cc8d369b54548b5b9052bc46",
+      "frame_count": 221,
+      "provenance": "actual recorded MuJoCo rollout",
+      "policy_source": "fallback_patch:v3_force_guard_gentle_place",
+      "seed": 101,
+      "result": {
+        "seed": 101,
+        "vision_3d_rmse_mm": 16.25,
+        "rubble_cleared_count": 2,
+        "peak_core_contact_force_n": 4.87,
+        "max_wrist_force_n": 5.65,
+        "core_shattered": false,
+        "core_extracted": true,
+        "vision_latency_p99_ms": 9.21,
+        "composite_score": 85.97,
+        "score_breakdown": {
+          "vision": 17.81,
+          "clearance": 25.0,
+          "extraction": 30.0,
+          "safety": 10.0,
+          "latency": 3.16
+        },
+        "force_ok_25": true
+      }
+    }
+  ]
+}

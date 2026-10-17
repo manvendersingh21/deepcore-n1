@@ -1,0 +1,131 @@
+{
+  "url": "http://127.0.0.1:8080",
+  "started_at": "2026-10-17T20:41:07.087Z",
+  "mode": "run-and-replay",
+  "captures": [
+    {
+      "pipeline": "baseline",
+      "seed": 101,
+      "run_id": 2,
+      "frame_count": 221,
+      "result": {
+        "seed": 101,
+        "vision_3d_rmse_mm": 135.12,
+        "rubble_cleared_count": 0,
+        "peak_core_contact_force_n": 5.05,
+        "max_wrist_force_n": 4.55,
+        "core_shattered": false,
+        "core_extracted": false,
+        "vision_latency_p99_ms": 3.08,
+        "composite_score": 14.38,
+        "score_breakdown": {
+          "vision": 0,
+          "clearance": 0,
+          "extraction": 0,
+          "safety": 10,
+          "latency": 4.38
+        },
+        "force_ok_25": true,
+        "pipeline_errors": []
+      },
+      "runs": [
+        {
+          "seed": 101,
+          "pipeline": "baseline",
+          "vision_3d_rmse_mm": 135.12,
+          "rubble_cleared_count": 0,
+          "peak_core_contact_force_n": 5.05,
+          "max_wrist_force_n": 4.55,
+          "core_shattered": false,
+          "core_extracted": false,
+          "vision_latency_p99_ms": 3.08,
+          "composite_score": 14.38,
+          "score_breakdown": {
+            "vision": 0,
+            "clearance": 0,
+            "extraction": 0,
+            "safety": 10,
+            "latency": 4.38
+          },
+          "force_ok_25": true,
+          "pipeline_errors": []
+        }
+      ]
+    },
+    {
+      "pipeline": "candidate",
+      "seed": 101,
+      "run_id": 3,
+      "frame_count": 221,
+      "result": {
+        "seed": 101,
+        "vision_3d_rmse_mm": 16.26,
+        "rubble_cleared_count": 2,
+        "peak_core_contact_force_n": 4.54,
+        "max_wrist_force_n": 5.32,
+        "core_shattered": false,
+        "core_extracted": true,
+        "vision_latency_p99_ms": 8.28,
+        "composite_score": 86.15,
+        "score_breakdown": {
+          "vision": 17.8,
+          "clearance": 25,
+          "extraction": 30,
+          "safety": 10,
+          "latency": 3.34
+        },
+        "force_ok_25": true,
+        "pipeline_errors": []
+      },
+      "runs": [
+        {
+          "seed": 101,
+          "pipeline": "baseline",
+          "vision_3d_rmse_mm": 135.12,
+          "rubble_cleared_count": 0,
+          "peak_core_contact_force_n": 5.05,
+          "max_wrist_force_n": 4.55,
+          "core_shattered": false,
+          "core_extracted": false,
+          "vision_latency_p99_ms": 3.08,
+          "composite_score": 14.38,
+          "score_breakdown": {
+            "vision": 0,
+            "clearance": 0,
+            "extraction": 0,
+            "safety": 10,
+            "latency": 4.38
+          },
+          "force_ok_25": true,
+          "pipeline_errors": []
+        },
+        {
+          "seed": 101,
+          "pipeline": "candidate",
+          "vision_3d_rmse_mm": 16.26,
+          "rubble_cleared_count": 2,
+          "peak_core_contact_force_n": 4.54,
+          "max_wrist_force_n": 5.32,
+          "core_shattered": false,
+          "core_extracted": true,
+          "vision_latency_p99_ms": 8.28,
+          "composite_score": 86.15,
+          "score_breakdown": {
+            "vision": 17.8,
+            "clearance": 25,
+            "extraction": 30,
+            "safety": 10,
+            "latency": 3.34
+          },
+          "force_ok_25": true,
+          "pipeline_errors": []
+        }
+      ]
+    }
+  ],
+  "browser_errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "error": "Error: Browser reported errors: Failed to load resource: the server responded with a status of 404 (Not Found)\n    at file:///Users/manubaba/Documents/deepcore-n1/scripts/record_web_demo.mjs:157:35",
+  "finished_at": "2026-10-17T20:42:00.011Z"
+}

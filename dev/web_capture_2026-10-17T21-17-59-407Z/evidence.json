@@ -1,0 +1,93 @@
+{
+  "url": "http://127.0.0.1:8080",
+  "started_at": "2026-10-17T21:17:59.407Z",
+  "mode": "run-and-replay",
+  "captures": [
+    {
+      "operation": "drill",
+      "pipeline": "candidate",
+      "seed": 101,
+      "run_id": 2,
+      "frame_count": 241,
+      "result": {
+        "operation": "drill",
+        "t": 11.999999999998789,
+        "phase": "complete",
+        "axial_force_n": 0,
+        "torque_nm": 4.258420524177731e-49,
+        "depth_mm": 0,
+        "rpm": 2.0332460285605978e-47,
+        "layers_removed": 12,
+        "layers_total": 12,
+        "peak_force_n": 114.05128372482739,
+        "limit_force_n": 120,
+        "complete": true,
+        "material_model": "breakable layers",
+        "stop_reason": "layers_removed",
+        "max_depth_mm": 87.9285316545979,
+        "feed_mm": 0.0024850806078397735,
+        "contact_torque_nm": 0,
+        "feed_actuator_force_n": -32.86335189425071,
+        "cutting_power_w": 0,
+        "contact_count": 0,
+        "contact_force_world_n": [
+          0,
+          0,
+          0
+        ],
+        "contact_position_m": [
+          0.42,
+          6.972034320474448e-19,
+          0.47703784227234425
+        ],
+        "active_layer": null,
+        "layer_work_j": 0,
+        "layer_threshold_j": 0,
+        "total_cutting_work_j": 43.9679151128542
+      },
+      "runs": [
+        {
+          "seed": 101,
+          "pipeline": "candidate",
+          "operation": "drill",
+          "t": 11.999999999998789,
+          "phase": "complete",
+          "axial_force_n": 0,
+          "torque_nm": 4.258420524177731e-49,
+          "depth_mm": 0,
+          "rpm": 2.0332460285605978e-47,
+          "layers_removed": 12,
+          "layers_total": 12,
+          "peak_force_n": 114.05128372482739,
+          "limit_force_n": 120,
+          "complete": true,
+          "material_model": "breakable layers",
+          "stop_reason": "layers_removed",
+          "max_depth_mm": 87.9285316545979,
+          "feed_mm": 0.0024850806078397735,
+          "contact_torque_nm": 0,
+          "feed_actuator_force_n": -32.86335189425071,
+          "cutting_power_w": 0,
+          "contact_count": 0,
+          "contact_force_world_n": [
+            0,
+            0,
+            0
+          ],
+          "contact_position_m": [
+            0.42,
+            6.972034320474448e-19,
+            0.47703784227234425
+          ],
+          "active_layer": null,
+          "layer_work_j": 0,
+          "layer_threshold_j": 0,
+          "total_cutting_work_j": 43.9679151128542
+        }
+      ]
+    }
+  ],
+  "browser_errors": [],
+  "output": "/Users/manubaba/Documents/deepcore-n1/dev/demo_drilling_browser.mp4",
+  "finished_at": "2026-10-17T21:18:22.498Z"
+}

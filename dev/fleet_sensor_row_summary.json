@@ -1,0 +1,283 @@
+{
+  "t": 80.00000000001793,
+  "phase": "complete",
+  "axial_force_n": 0.0,
+  "torque_nm": 0.0,
+  "depth_mm": 0.0,
+  "rpm": -9.4e-323,
+  "layers_removed": 12,
+  "layers_total": 12,
+  "peak_force_n": 83.23550263977617,
+  "limit_force_n": 120.0,
+  "complete": true,
+  "material_model": "breakable layers",
+  "stop_reason": "mission_depth",
+  "max_depth_mm": 89.01234433750305,
+  "feed_mm": -6.630122102509388e-17,
+  "contact_torque_nm": 0.0,
+  "feed_actuator_force_n": -32.8635,
+  "cutting_power_w": 0.0,
+  "contact_count": 0,
+  "contact_force_world_n": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "contact_position_m": [
+    0.4199999999999925,
+    1.96911569332491e-14,
+    0.4770449528255993
+  ],
+  "active_layer": null,
+  "layer_work_j": 0.0,
+  "layer_threshold_j": 0.0,
+  "total_cutting_work_j": 43.934146308811975,
+  "mode": "mining_fleet",
+  "duration_s": 80.0,
+  "seed": 101,
+  "autonomy_mode": "experimental sensor-driven fleet; not benchmark-verified",
+  "sensor_based": true,
+  "pickup_observation": "corrupted RGB-D tracks with robot proprioception",
+  "sensor_tracks": [],
+  "sensor_occluded": false,
+  "perception_stats": {
+    "frames": 1600,
+    "detections": 2077,
+    "empty_frames": 740
+  },
+  "pickup_misses": 0,
+  "drilling_complete": true,
+  "machine_positions": {
+    "driller": [
+      -0.45,
+      -0.25,
+      0.49
+    ],
+    "collector": [
+      1.15,
+      -0.5999999999999995,
+      0.49
+    ]
+  },
+  "machine_phases": {
+    "driller": "parked",
+    "collector": "parked"
+  },
+  "machine_distance_m": {
+    "drill": 1.2057410435699558,
+    "collector": 15.198311350953077
+  },
+  "debris_produced": 6,
+  "debris_collected": 6,
+  "debris_total": 6,
+  "held_debris": null,
+  "cart_counts": [
+    2,
+    2,
+    2
+  ],
+  "cart_capacity": 2,
+  "active_cart": 2,
+  "cart_centers": [
+    [
+      -0.35,
+      0.65
+    ],
+    [
+      0.7,
+      0.65
+    ],
+    [
+      1.75,
+      0.65
+    ]
+  ],
+  "cart_load_n": [
+    3.139199999999997,
+    3.139199999999997,
+    3.139199999999997
+  ],
+  "cart_travel_m": [
+    -1.0505305268706817,
+    -1.050530526872502,
+    -1.050530526861166
+  ],
+  "cart_departed": [
+    true,
+    true,
+    true
+  ],
+  "grasp_contact_count": 0,
+  "collector_contact_force_n": 0.0,
+  "collector_peak_force_n": 10.668187051519284,
+  "collector_contacts": [],
+  "collector_tcp_m": [
+    0.7300015221359086,
+    -0.6000005196918125,
+    0.6749999983270597
+  ],
+  "grasp_events": [
+    {
+      "t": 19.285000000000586,
+      "debris_id": 5,
+      "pad_contacts": 2,
+      "contact_force_n": 4.2787707034191005
+    },
+    {
+      "t": 26.812000000009785,
+      "debris_id": 0,
+      "pad_contacts": 2,
+      "contact_force_n": 3.9947142729016214
+    },
+    {
+      "t": 34.90500000000935,
+      "debris_id": 2,
+      "pad_contacts": 2,
+      "contact_force_n": 4.0283493872777845
+    },
+    {
+      "t": 42.9929999999905,
+      "debris_id": 4,
+      "pad_contacts": 2,
+      "contact_force_n": 3.7015229951668784
+    },
+    {
+      "t": 51.5749999999705,
+      "debris_id": 3,
+      "pad_contacts": 2,
+      "contact_force_n": 6.120757906431253
+    },
+    {
+      "t": 64.11199999994207,
+      "debris_id": 1,
+      "pad_contacts": 2,
+      "contact_force_n": 8.527530141695063
+    }
+  ],
+  "collector_arm": {
+    "model": "Universal Robots UR5e (MuJoCo Menagerie)",
+    "joint_positions_rad": [
+      -0.3247243992118437,
+      -1.4097655790407688,
+      2.3538380697501475,
+      -2.514869945763163,
+      -1.5707963326931265,
+      1.246071927589674
+    ],
+    "joint_target_rad": [
+      -0.32472439921184487,
+      -1.4097655790407722,
+      2.3538380697501573,
+      -2.5148699457631665,
+      -1.5707963326931234,
+      1.246071927589672
+    ],
+    "joint_torque_nm": [
+      0.0,
+      -17.983907524431743,
+      -11.554203009452067,
+      -1.891270798048481,
+      -3.401737558306195e-09,
+      0.0
+    ],
+    "ik_error_m": 1.6704642158536544e-06,
+    "tool_position_m": [
+      0.7300015808436119,
+      -0.6000005397975173,
+      0.7299999983270247
+    ]
+  },
+  "grasp_policy": {
+    "policy": "accepted_gripper_closure",
+    "version": 4,
+    "source": "fallback_patch:v3_force_guard_gentle_place",
+    "source_path": "~/deepcore-n1/workspace/versions/v4.py",
+    "sha256": "601d8825913e741e2069f49fd1036198001ecfa432e244ac34b5bb8f3d0af97b",
+    "safe_touch_n": 5.5,
+    "evaluation_scope": "accepted on core recovery; fleet transfer not benchmark-verified",
+    "update_cadence_hz": 20.0
+  },
+  "fleet_planner": "RGB-D pickup tracks, force-controlled drilling, tactile grasps, measured cart loads",
+  "grasp_model": "contact-conditioned weld",
+  "drive_model": "actuated planar mobile bases",
+  "debris": [
+    {
+      "id": 0,
+      "produced": true,
+      "collected": true,
+      "released": true,
+      "position": [
+        -1.4003254191817496,
+        0.7339938363365267,
+        0.449080808039308
+      ],
+      "produced_at": 4.824999999999946,
+      "picked_up_at": 26.812000000009785
+    },
+    {
+      "id": 1,
+      "produced": true,
+      "collected": true,
+      "released": true,
+      "position": [
+        0.7075024072737992,
+        0.734795970904732,
+        0.449080808039308
+      ],
+      "produced_at": 6.321000000000446,
+      "picked_up_at": 64.11199999994207
+    },
+    {
+      "id": 2,
+      "produced": true,
+      "collected": true,
+      "released": true,
+      "position": [
+        -0.3664891629182858,
+        0.5648147087074136,
+        0.449080808039308
+      ],
+      "produced_at": 7.8030000000009405,
+      "picked_up_at": 34.90500000000935
+    },
+    {
+      "id": 3,
+      "produced": true,
+      "collected": true,
+      "released": true,
+      "position": [
+        0.7030837620260162,
+        0.5674510744680303,
+        0.449080808039308
+      ],
+      "produced_at": 9.288000000000292,
+      "picked_up_at": 51.5749999999705
+    },
+    {
+      "id": 4,
+      "produced": true,
+      "collected": true,
+      "released": true,
+      "position": [
+        -0.3514744569408745,
+        0.7345162533510584,
+        0.449080808039308
+      ],
+      "produced_at": 10.76899999999947,
+      "picked_up_at": 42.9929999999905
+    },
+    {
+      "id": 5,
+      "produced": true,
+      "collected": true,
+      "released": true,
+      "position": [
+        -1.4078498427883306,
+        0.564385215684197,
+        0.4490808080393079
+      ],
+      "produced_at": 12.275999999998636,
+      "picked_up_at": 19.285000000000586
+    }
+  ]
+}

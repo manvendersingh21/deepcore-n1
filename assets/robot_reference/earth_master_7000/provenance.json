@@ -1,0 +1,11 @@
+{
+  "retrieved_at_utc": "2026-10-17T21:36:45.827507Z",
+  "model_page": "https://sketchfab.com/3d-models/earth-master-7000-89b637c672924822a95142d60f4f57ec",
+  "metadata_api": "https://api.sketchfab.com/v3/models/89b637c672924822a95142d60f4f57ec",
+  "metadata_http_status": 200,
+  "official_download_api": "https://api.sketchfab.com/v3/models/89b637c672924822a95142d60f4f57ec/download",
+  "download_api_http_status_without_authentication": 401,
+  "download_api_response_without_authentication": "{\"detail\":\"Authentication credentials were not provided.\"}",
+  "official_api_documentation": "https://docs.sketchfab.com/data-api/v3/index.html",
+  "download_attempt": "No credentials were sent; no viewer assets or private endpoints were accessed."
+}

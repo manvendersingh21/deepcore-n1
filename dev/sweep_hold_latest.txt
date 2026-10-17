@@ -1,0 +1,4 @@
+RESULT v0 {'composite_score': 7.72, 'core_shattered': True, 'core_extracted': False, 'rubble_cleared_count': 0.0, 'peak_core_contact_force_n': 24.19, 'vision_3d_rmse_mm': 126.63}
+RESULT v1_hsv_iqr_z_ordering {'composite_score': 29.83, 'core_shattered': True, 'core_extracted': False, 'rubble_cleared_count': 0.67, 'peak_core_contact_force_n': 21.45, 'vision_3d_rmse_mm': 17.28}
+RESULT v2_yaw_tracker {'composite_score': 39.75, 'core_shattered': True, 'core_extracted': False, 'rubble_cleared_count': 1.33, 'peak_core_contact_force_n': 17.78, 'vision_3d_rmse_mm': 14.54}
+RESULT v3_force_guard_gentle_place {'composite_score': 47.27, 'core_shattered': True, 'core_extracted': False, 'rubble_cleared_count': 2.0, 'peak_core_contact_force_n': 19.38, 'vision_3d_rmse_mm': 14.63}

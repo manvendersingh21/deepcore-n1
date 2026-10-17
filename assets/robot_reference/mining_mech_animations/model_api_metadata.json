@@ -1,0 +1,226 @@
+{
+  "animationCount": 1,
+  "categories": [
+    {
+      "uid": "22a2f677efad4d7bbca5ad45f9b5868e",
+      "name": "Cars & Vehicles",
+      "slug": "cars-vehicles",
+      "uri": "https://api.sketchfab.com/v3/categories/22a2f677efad4d7bbca5ad45f9b5868e",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/45dd0cc0860ac57fcd63bde1cc3f2b7c-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/22a2f677efad4d7bbca5ad45f9b5868e/800x450.png"
+        }
+      ]
+    },
+    {
+      "uid": "2d643ff5ed03405b9c34ecdffff9d8d8",
+      "name": "Characters & Creatures",
+      "slug": "characters-creatures",
+      "uri": "https://api.sketchfab.com/v3/categories/2d643ff5ed03405b9c34ecdffff9d8d8",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/f778c3dbe6efa00a06c257762c0e27ef-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/2d643ff5ed03405b9c34ecdffff9d8d8/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/2d643ff5ed03405b9c34ecdffff9d8d8/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 8,
+  "createdAt": "2021-02-20T00:33:58.930311",
+  "embedUrl": "https://sketchfab.com/models/2d299383efbb48b3a47b97c24edd2684/embed",
+  "faceCount": 31992,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/783b685da9bf457d81e829fa283f3567",
+    "label": "Standard",
+    "fullName": "Standard",
+    "requirements": "Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works",
+    "url": "https://sketchfab.com/licenses",
+    "slug": "st"
+  },
+  "likeCount": 165,
+  "name": "MINING MECH ANIMATIONS",
+  "publishedAt": "2021-02-20T00:35:11.085951",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [
+    {
+      "name": "mech",
+      "slug": "mech",
+      "uri": "https://api.sketchfab.com/v3/tags/mech"
+    },
+    {
+      "name": "digger",
+      "slug": "digger",
+      "uri": "https://api.sketchfab.com/v3/tags/digger"
+    },
+    {
+      "name": "mining",
+      "slug": "mining",
+      "uri": "https://api.sketchfab.com/v3/tags/mining"
+    },
+    {
+      "name": "drill",
+      "slug": "drill",
+      "uri": "https://api.sketchfab.com/v3/tags/drill"
+    },
+    {
+      "name": "mob",
+      "slug": "mob",
+      "uri": "https://api.sketchfab.com/v3/tags/mob"
+    },
+    {
+      "name": "mecha",
+      "slug": "mecha",
+      "uri": "https://api.sketchfab.com/v3/tags/mecha"
+    },
+    {
+      "name": "boss",
+      "slug": "boss",
+      "uri": "https://api.sketchfab.com/v3/tags/boss"
+    },
+    {
+      "name": "Enemy",
+      "slug": "enemy",
+      "uri": "https://api.sketchfab.com/v3/tags/enemy"
+    },
+    {
+      "name": "mines",
+      "slug": "mines",
+      "uri": "https://api.sketchfab.com/v3/tags/mines"
+    },
+    {
+      "name": "scifi",
+      "slug": "scifi",
+      "uri": "https://api.sketchfab.com/v3/tags/scifi"
+    },
+    {
+      "name": "fantasy",
+      "slug": "fantasy",
+      "uri": "https://api.sketchfab.com/v3/tags/fantasy"
+    },
+    {
+      "name": "robot",
+      "slug": "robot",
+      "uri": "https://api.sketchfab.com/v3/tags/robot"
+    },
+    {
+      "name": "sonyrobotchallenge",
+      "slug": "sonyrobotchallenge",
+      "uri": "https://api.sketchfab.com/v3/tags/sonyrobotchallenge"
+    }
+  ],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "4b21d96a890f41b593859b541db12076",
+        "width": 1920,
+        "height": 1080,
+        "size": 234820,
+        "url": "https://media.sketchfab.com/models/2d299383efbb48b3a47b97c24edd2684/thumbnails/c2da48835cac470298d86d1b66e5cc17/48f5b3342ceb4c5dba13d5ace0fb0766.jpeg"
+      },
+      {
+        "uid": "ba8abb3f8db9493881b34c39e88da062",
+        "width": 1024,
+        "height": 576,
+        "size": 51217,
+        "url": "https://media.sketchfab.com/models/2d299383efbb48b3a47b97c24edd2684/thumbnails/c2da48835cac470298d86d1b66e5cc17/4dbbdba418f94ceebbe1f16aca67be0e.jpeg"
+      },
+      {
+        "uid": "6207e000923344bda0cc98182dc2af59",
+        "width": 720,
+        "height": 405,
+        "size": 30293,
+        "url": "https://media.sketchfab.com/models/2d299383efbb48b3a47b97c24edd2684/thumbnails/c2da48835cac470298d86d1b66e5cc17/5c8fd104cf1946deb52c37af7c9e2074.jpeg"
+      },
+      {
+        "uid": "58b2c75d1f7d4192ae9731897e21035e",
+        "width": 256,
+        "height": 144,
+        "size": 6309,
+        "url": "https://media.sketchfab.com/models/2d299383efbb48b3a47b97c24edd2684/thumbnails/c2da48835cac470298d86d1b66e5cc17/991b7a5de89745cf93a4cc236c5c69ce.jpeg"
+      },
+      {
+        "uid": "b09e1fa45b384477b2de4c05239a003c",
+        "width": 64,
+        "height": 36,
+        "size": 1242,
+        "url": "https://media.sketchfab.com/models/2d299383efbb48b3a47b97c24edd2684/thumbnails/c2da48835cac470298d86d1b66e5cc17/b1d5dfa8a1654afda3dd10b4347d7dbc.jpeg"
+      }
+    ]
+  },
+  "uid": "2d299383efbb48b3a47b97c24edd2684",
+  "uri": "https://api.sketchfab.com/v3/models/2d299383efbb48b3a47b97c24edd2684",
+  "user": {
+    "uid": "1421671fe96341698297588514445180",
+    "username": "protofactor",
+    "displayName": "PROTOFACTOR, INC.",
+    "account": "pro",
+    "profileUrl": "https://sketchfab.com/protofactor",
+    "avatar": {
+      "uid": "9dd78c20d23d457f81f2a586d56e7d04",
+      "uri": "https://api.sketchfab.com/v3/avatars/9dd78c20d23d457f81f2a586d56e7d04",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 864,
+          "url": "https://media.sketchfab.com/avatars/9dd78c20d23d457f81f2a586d56e7d04/145ae583bb2d41788a0dccd80aa965b1.jpeg"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 1409,
+          "url": "https://media.sketchfab.com/avatars/9dd78c20d23d457f81f2a586d56e7d04/d1eb58f59b9b45bfb58e76f4c2b4202f.jpeg"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 2851,
+          "url": "https://media.sketchfab.com/avatars/9dd78c20d23d457f81f2a586d56e7d04/bf8885800a024d7896e8297137b552cc.jpeg"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 3280,
+          "url": "https://media.sketchfab.com/avatars/9dd78c20d23d457f81f2a586d56e7d04/12c07803317343b6845425e294bf452e.jpeg"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/1421671fe96341698297588514445180"
+  },
+  "vertexCount": 17823,
+  "viewCount": 8271,
+  "viewerUrl": "https://sketchfab.com/3d-models/mining-mech-animations-2d299383efbb48b3a47b97c24edd2684",
+  "isDownloadable": false,
+  "isProtected": false,
+  "description": "",
+  "price": 2999,
+  "downloadCount": 7,
+  "editorUrl": "https://sketchfab.com/models/2d299383efbb48b3a47b97c24edd2684/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "website",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2024-08-14T16:39:22.709730",
+  "pbrType": "metalness",
+  "textureCount": 19,
+  "materialCount": 4
+}

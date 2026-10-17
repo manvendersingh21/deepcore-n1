@@ -1,0 +1,3 @@
+ASSIGNMENT (HUD polish, look only): edit ONLY ui/live_hud.py and tests/test_ui_unit.py. Do not touch core/, agents/, scripts/, or shared_brain/.
+Goal: the HUD must never show a state the run has not reached. Current idle screen is honest (AWAITING RUN, NO LIVE FRAME, no contract ticks). Improve visual polish (spacing, alignment, hierarchy, the phase pill, the force plot readability) WITHOUT adding any new claim. Render idle and a synthetic live state (HudState with real-looking values) to dev/hud_polish_idle.png and dev/hud_polish_live.png, view them, and keep tests/test_ui_unit.py green (.venv/bin/python -m pytest tests/test_ui_unit.py -q).
+Report files changed and the two PNG paths, one line each.

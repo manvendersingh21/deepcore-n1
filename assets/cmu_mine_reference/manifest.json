@@ -1,0 +1,60 @@
+{
+  "source_page": "https://www.cs.cmu.edu/~thrun/3D/mines/html/map0.html",
+  "downloaded_date_utc": "2026-10-17",
+  "validated_at_utc": "2026-10-17T21:23:29Z",
+  "license": "Unspecified on the linked CMU source page; no claim of open-source status or redistribution permission.",
+  "downloads": [
+    {
+      "filename": "mine1-mod.vrml",
+      "source_url": "https://www.cs.cmu.edu/~thrun/3D/mines/mine-mapping/mine1-mod.vrml",
+      "http_status": 200,
+      "size_bytes": 32808388,
+      "sha256": "b46d7188c5a1525600b548e973b7221ee7870edd83cdd4542eb1eb19c1fc3874",
+      "format": "VRML 1.0 ASCII",
+      "header": "#VRML V1.0 ascii"
+    },
+    {
+      "filename": "bruceton1126.mpg",
+      "source_url": "https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/anim/bruceton1126.mpg",
+      "http_status": 200,
+      "size_bytes": 31825967,
+      "sha256": "dd141fc307d8dd4da763789e0ed34338e33bef2393d28183cd7d2438654f37e7",
+      "format": "MPEG-1 video",
+      "probe": {
+        "width": 320,
+        "height": 240,
+        "duration_seconds": 221.398032
+      }
+    },
+    {
+      "filename": "mine1-anim2.avi",
+      "source_url": "https://www.cs.cmu.edu/~thrun/3D/mines/mine-mapping/mine1-anim2.avi",
+      "http_status": 200,
+      "size_bytes": 57704866,
+      "sha256": "672568a92eee6b1800ff65b87b09dd1b84d1c45f1b4bd6194a612ad429b37337",
+      "format": "RIFF AVI header present; stream metadata invalid",
+      "probe_error": "ffprobe: Invalid sample rate: -16246711; Invalid data found when processing input",
+      "retry": {
+        "http_status": 200,
+        "size_bytes": 57704866,
+        "sha256": "672568a92eee6b1800ff65b87b09dd1b84d1c45f1b4bd6194a612ad429b37337",
+        "result": "same bytes; temporary retry copy removed"
+      }
+    },
+    {
+      "filename": "mine1-anim-alt.avi",
+      "source_url": "https://www.cs.cmu.edu/~thrun/3D/mines/mine-mapping/mine1-anim-alt.avi",
+      "http_status": 200,
+      "size_bytes": 10419748,
+      "sha256": "54677b78d8e312136adff8b6d18c879ef959f17d6eb5957f1d3710da6f33cb9f",
+      "format": "AVI, Microsoft MPEG-4 v2",
+      "probe": {
+        "width": 640,
+        "height": 480,
+        "frame_rate": "30/1",
+        "duration_seconds": 27.566667
+      }
+    }
+  ],
+  "total_download_bytes": 132758969
+}

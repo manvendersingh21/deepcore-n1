@@ -1,0 +1,325 @@
+{
+  "t": 80.00000000001793,
+  "phase": "collecting",
+  "axial_force_n": 0.0,
+  "torque_nm": 0.0,
+  "depth_mm": 0.0,
+  "rpm": -9.4e-323,
+  "layers_removed": 12,
+  "layers_total": 12,
+  "peak_force_n": 83.23550263977617,
+  "limit_force_n": 120.0,
+  "complete": false,
+  "material_model": "breakable layers",
+  "stop_reason": "mission_depth",
+  "max_depth_mm": 89.01234433750305,
+  "feed_mm": -6.630122102509388e-17,
+  "contact_torque_nm": 0.0,
+  "feed_actuator_force_n": -32.8635,
+  "cutting_power_w": 0.0,
+  "contact_count": 0,
+  "contact_force_world_n": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "contact_position_m": [
+    0.41999999999999243,
+    1.9688033777398147e-14,
+    0.4770449528255992
+  ],
+  "active_layer": null,
+  "layer_work_j": 0.0,
+  "layer_threshold_j": 0.0,
+  "total_cutting_work_j": 43.934146308811904,
+  "mode": "mining_fleet",
+  "duration_s": 80.0,
+  "autonomy_mode": "experimental sensor-driven fleet; not benchmark-verified",
+  "sensor_based": true,
+  "pickup_observation": "corrupted RGB-D tracks with robot proprioception",
+  "sensor_tracks": [
+    {
+      "track_id": 22,
+      "pos": [
+        0.21099753279381844,
+        0.7218688529203288,
+        0.42000000000000004
+      ],
+      "confidence": 0.6928571428571428,
+      "last_seen": 79.9500000000177,
+      "born_at": 28.450000000011787,
+      "provenance": "corrupted_rgbd",
+      "age_s": 0.0,
+      "visible": true
+    },
+    {
+      "track_id": 26,
+      "pos": [
+        0.41551334221458835,
+        0.18991625515722788,
+        0.42034016348465086
+      ],
+      "confidence": 0.7928571428571429,
+      "last_seen": 79.75000000001674,
+      "born_at": 33.40000000001286,
+      "provenance": "corrupted_rgbd",
+      "age_s": 0.20000000000095497,
+      "visible": false
+    },
+    {
+      "track_id": 27,
+      "pos": [
+        0.26882466021889767,
+        0.33056065660116934,
+        0.42000000000000004
+      ],
+      "confidence": 0.7357142857142858,
+      "last_seen": 79.9500000000177,
+      "born_at": 33.80000000001193,
+      "provenance": "corrupted_rgbd",
+      "age_s": 0.0,
+      "visible": true
+    },
+    {
+      "track_id": 28,
+      "pos": [
+        0.30720100491665797,
+        0.22727894629945156,
+        0.42000000000000004
+      ],
+      "confidence": 0.6928571428571428,
+      "last_seen": 79.85000000001722,
+      "born_at": 35.650000000007616,
+      "provenance": "corrupted_rgbd",
+      "age_s": 0.10000000000047748,
+      "visible": false
+    },
+    {
+      "track_id": 29,
+      "pos": [
+        0.20285616522441,
+        0.8761906999798259,
+        0.42000000000000004
+      ],
+      "confidence": 0.6785714285714286,
+      "last_seen": 79.9500000000177,
+      "born_at": 41.29999999999445,
+      "provenance": "corrupted_rgbd",
+      "age_s": 0.0,
+      "visible": true
+    },
+    {
+      "track_id": 31,
+      "pos": [
+        0.2554916202859202,
+        0.41692464547321073,
+        0.42000000000000004
+      ],
+      "confidence": 0.99,
+      "last_seen": 79.90000000001746,
+      "born_at": 79.60000000001602,
+      "provenance": "corrupted_rgbd",
+      "age_s": 0.05000000000023874,
+      "visible": false
+    }
+  ],
+  "sensor_occluded": false,
+  "pickup_misses": 7,
+  "drilling_complete": true,
+  "machine_positions": {
+    "driller": [
+      -0.45,
+      -0.25,
+      0.49
+    ],
+    "collector": [
+      0.8525977763059618,
+      0.3077871990246819,
+      0.49
+    ]
+  },
+  "machine_phases": {
+    "driller": "parked",
+    "collector": "lowering gripper"
+  },
+  "machine_distance_m": {
+    "drill": 1.2057410435699558,
+    "collector": 4.340775307903377
+  },
+  "debris_produced": 6,
+  "debris_collected": 0,
+  "debris_total": 6,
+  "held_debris": null,
+  "cart_counts": [
+    0,
+    0,
+    0
+  ],
+  "cart_capacity": 2,
+  "active_cart": 0,
+  "cart_centers": [
+    [
+      -0.35,
+      0.65
+    ],
+    [
+      0.7,
+      0.65
+    ],
+    [
+      1.75,
+      0.65
+    ]
+  ],
+  "cart_load_n": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "cart_travel_m": [
+    0.0,
+    -0.003215942918034281,
+    0.0
+  ],
+  "cart_departed": [
+    false,
+    false,
+    false
+  ],
+  "grasp_contact_count": 0,
+  "collector_contact_force_n": 0.0,
+  "collector_peak_force_n": 0.0,
+  "collector_contacts": [],
+  "collector_tcp_m": [
+    0.43078672340508,
+    0.2936943131358482,
+    0.43829490270768423
+  ],
+  "grasp_events": [],
+  "collector_arm": {
+    "model": "Universal Robots UR5e (MuJoCo Menagerie)",
+    "joint_positions_rad": [
+      -0.2896946081202236,
+      -0.6348423194403512,
+      2.322857588478495,
+      -3.2839100660864218,
+      -1.570796220715968,
+      1.24607204882389
+    ],
+    "joint_target_rad": [
+      -0.324724281503094,
+      -0.5883591926817983,
+      2.3011907649326275,
+      -3.2836266850034717,
+      -1.5707963680588735,
+      1.2460720453111178
+    ],
+    "joint_torque_nm": [
+      -83.97826490127545,
+      78.88868030670051,
+      -51.85294962993703,
+      -1.5581077359524897,
+      -0.004776504256142289,
+      0.0004471061893127626
+    ],
+    "ik_error_m": 3.9379192167879e-06,
+    "tool_position_m": [
+      0.43210948172062574,
+      0.29330003112122766,
+      0.49327758045378534
+    ]
+  },
+  "grasp_policy": {
+    "policy": "accepted_gripper_closure",
+    "version": 4,
+    "source": "fallback_patch:v3_force_guard_gentle_place",
+    "source_path": "~/deepcore-n1/workspace/versions/v4.py",
+    "sha256": "601d8825913e741e2069f49fd1036198001ecfa432e244ac34b5bb8f3d0af97b",
+    "safe_touch_n": 5.5,
+    "evaluation_scope": "accepted on core recovery; fleet transfer not benchmark-verified",
+    "update_cadence_hz": 20.0
+  },
+  "fleet_planner": "RGB-D pickup tracks, force-controlled drilling, tactile grasps, measured cart loads",
+  "grasp_model": "contact-conditioned weld",
+  "drive_model": "actuated planar mobile bases",
+  "debris": [
+    {
+      "id": 0,
+      "produced": true,
+      "collected": false,
+      "released": false,
+      "position": [
+        0.42000000000000187,
+        0.18000000000000094,
+        0.4230829929608003
+      ],
+      "produced_at": 4.824999999999946,
+      "picked_up_at": null
+    },
+    {
+      "id": 1,
+      "produced": true,
+      "collected": false,
+      "released": false,
+      "position": [
+        0.42000000000000187,
+        0.32000000000000095,
+        0.4230829929608002
+      ],
+      "produced_at": 6.321000000000446,
+      "picked_up_at": null
+    },
+    {
+      "id": 2,
+      "produced": true,
+      "collected": false,
+      "released": false,
+      "position": [
+        0.42000000000000187,
+        0.46000000000000096,
+        0.4230882900096881
+      ],
+      "produced_at": 7.8030000000009405,
+      "picked_up_at": null
+    },
+    {
+      "id": 3,
+      "produced": true,
+      "collected": false,
+      "released": false,
+      "position": [
+        0.42000000000000187,
+        0.600000000000001,
+        0.42308829000968823
+      ],
+      "produced_at": 9.288000000000292,
+      "picked_up_at": null
+    },
+    {
+      "id": 4,
+      "produced": true,
+      "collected": false,
+      "released": false,
+      "position": [
+        0.42000000000000187,
+        0.7400000000000009,
+        0.4230956133567751
+      ],
+      "produced_at": 10.76899999999947,
+      "picked_up_at": null
+    },
+    {
+      "id": 5,
+      "produced": true,
+      "collected": false,
+      "released": false,
+      "position": [
+        0.42000000000000187,
+        0.880000000000001,
+        0.423095613356775
+      ],
+      "produced_at": 12.275999999998636,
+      "picked_up_at": null
+    }
+  ]
+}

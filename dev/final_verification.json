@@ -1,0 +1,593 @@
+{
+  "created_at": "2026-10-17T21:42:12.471411+00:00",
+  "operation": "accepted_benchmark_rerun",
+  "decision": "STOP_DONE",
+  "passed": true,
+  "promotion_performed": false,
+  "scope": "Locked sensor-only RGB-D excavation benchmark; separate fleet is privileged scripted simulation.",
+  "core_hashes": {
+    "verifier_harness.py": "7485154b2438ebbf45bd42368dd40dadadc4632b1e66898e7b87dee77e2496a0",
+    "scene.xml": "f2862d17c5fc5e77b30c00e99bc5d2fdd76fcae11aafa96fe99ce8222d205c6a",
+    "env_runner.py": "c96085649679f2ea0e6907e78c0b9839081c829c6c3f628ae7b36a762bd77dd8",
+    "sensor_corruption.py": "5172100dda5d3fadd99602c37472a6cf4d34a998ee80fae84e28506e79832271"
+  },
+  "ledger_source_hashes": [
+    {
+      "version": 0,
+      "path": "workspace/versions/v0.py",
+      "expected_sha256": "b5d655569b2b1a7f6d92025743f6091497528ecd2e86cd69eea78cf46da7e24b",
+      "actual_sha256": "b5d655569b2b1a7f6d92025743f6091497528ecd2e86cd69eea78cf46da7e24b",
+      "matches": true
+    },
+    {
+      "version": 1,
+      "path": "workspace/versions/v1.py",
+      "expected_sha256": "3d26e0d04c65f7a0eeb116f511d9be87d0cba2857933dcf5aef78ab9657f8da9",
+      "actual_sha256": "3d26e0d04c65f7a0eeb116f511d9be87d0cba2857933dcf5aef78ab9657f8da9",
+      "matches": true
+    },
+    {
+      "version": 2,
+      "path": "workspace/versions/candidate_g2.py",
+      "expected_sha256": "16fd206c441fece6b93dd638c15988a708f53ca0ed9038184c8e20d843dd87b7",
+      "actual_sha256": "16fd206c441fece6b93dd638c15988a708f53ca0ed9038184c8e20d843dd87b7",
+      "matches": true
+    },
+    {
+      "version": 3,
+      "path": "workspace/versions/candidate_g3_llm.py",
+      "expected_sha256": "9c58d8a48284df9c575a203037e92c94f1badea1bb42b95b611a4a96763963bf",
+      "actual_sha256": "9c58d8a48284df9c575a203037e92c94f1badea1bb42b95b611a4a96763963bf",
+      "matches": true
+    },
+    {
+      "version": 4,
+      "path": "workspace/versions/v4.py",
+      "expected_sha256": "601d8825913e741e2069f49fd1036198001ecfa432e244ac34b5bb8f3d0af97b",
+      "actual_sha256": "601d8825913e741e2069f49fd1036198001ecfa432e244ac34b5bb8f3d0af97b",
+      "matches": true
+    }
+  ],
+  "accepted_version": 4,
+  "accepted_source_sha256": "601d8825913e741e2069f49fd1036198001ecfa432e244ac34b5bb8f3d0af97b",
+  "accepted_source_path": "workspace/versions/v4.py",
+  "historical_accepted_metrics": {
+    "opt": {
+      "vision_3d_rmse_mm": 16.55,
+      "rubble_cleared_count": 2.0,
+      "peak_core_contact_force_n": 10.52,
+      "composite_score": 82.02,
+      "core_shattered": false,
+      "core_extracted": true,
+      "extraction_rate": 1.0,
+      "max_wrist_force_n": 14.64,
+      "vision_latency_p99_ms": 10.29,
+      "force_ok_25": true,
+      "passed": true
+    },
+    "holdout": {
+      "vision_3d_rmse_mm": 13.99,
+      "rubble_cleared_count": 2.0,
+      "peak_core_contact_force_n": 7.81,
+      "composite_score": 85.54,
+      "core_shattered": false,
+      "core_extracted": true,
+      "extraction_rate": 1.0,
+      "max_wrist_force_n": 13.31,
+      "vision_latency_p99_ms": 9.89,
+      "force_ok_25": true,
+      "passed": true
+    }
+  },
+  "previous_accepted_reference": {
+    "version": 1,
+    "sha256": "3d26e0d04c65f7a0eeb116f511d9be87d0cba2857933dcf5aef78ab9657f8da9",
+    "opt_composite": 30.59,
+    "holdout_composite": 32.31
+  },
+  "mission": {
+    "sha256": "50da2ed79161294a853ba10b69ffd0bd22382480e32968dfe62c12e4edc7322a",
+    "document": {
+      "assertions": [
+        {
+          "metric": "core_extracted",
+          "op": "==",
+          "seeds": "holdout",
+          "value": true
+        },
+        {
+          "metric": "rubble_cleared_count",
+          "op": ">=",
+          "seeds": "holdout",
+          "value": 2
+        },
+        {
+          "metric": "extraction_rate",
+          "op": ">",
+          "seeds": "holdout",
+          "value": 0.8
+        },
+        {
+          "metric": "vision_latency_p99_ms",
+          "op": "<",
+          "seeds": "holdout",
+          "value": 50
+        },
+        {
+          "metric": "peak_core_contact_force_n",
+          "op": "<",
+          "seeds": "holdout",
+          "value": 10
+        },
+        {
+          "metric": "max_wrist_force_n",
+          "op": "<",
+          "seeds": "holdout",
+          "value": 15
+        },
+        {
+          "metric": "core_shattered",
+          "op": "==",
+          "seeds": "holdout",
+          "value": false
+        },
+        {
+          "metric": "composite_score",
+          "op": ">",
+          "seeds": "holdout",
+          "value": 85.0
+        },
+        {
+          "metric": "vision_latency_p99_ms",
+          "op": "<",
+          "seeds": "opt",
+          "value": 25.0
+        }
+      ],
+      "goal": "Extract the intact core, clear both boulders, improve held-out performance with safe force and latency.",
+      "source": "llm:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B"
+    }
+  },
+  "agent_review": {
+    "status": "unverified agent review; not a promotion",
+    "contract": {
+      "contract_id": "g4-49a94583",
+      "target_rmse_mm": 8.3,
+      "require_top_down_rubble_ordering": false,
+      "max_force_cutoff_n": 18.0,
+      "latency_ms": 25.0,
+      "baseline_composite": 82.02,
+      "origin": "deterministic"
+    },
+    "proposals": [
+      {
+        "agent": "VisionSpecialist",
+        "validated_static_only": true,
+        "problems": [],
+        "promoted": false,
+        "path": "~/deepcore-n1/dev/agent_review_drafts/20261017T214212475445Z/VisionSpecialist_unverified.py",
+        "sha256": "0b21009d86ce89c53221e5e2d1f503f443ae57ea97a7c3fdae9e170d66f75454"
+      },
+      {
+        "agent": "ControlSpecialist",
+        "validated_static_only": false,
+        "problems": [
+          "JSONDecodeError: Extra data: line 10 column 1 (char 473)"
+        ],
+        "promoted": false
+      }
+    ]
+  },
+  "fresh_evaluation": {
+    "opt": {
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "aggregate": {
+        "vision_3d_rmse_mm": 16.55,
+        "rubble_cleared_count": 2.0,
+        "peak_core_contact_force_n": 10.52,
+        "composite_score": 81.92,
+        "core_shattered": false,
+        "core_extracted": true,
+        "extraction_rate": 1.0,
+        "max_wrist_force_n": 14.64,
+        "vision_latency_p99_ms": 10.6,
+        "force_ok_25": true,
+        "passed": true
+      },
+      "per_seed": [
+        {
+          "seed": 11,
+          "vision_3d_rmse_mm": 13.49,
+          "rubble_cleared_count": 2,
+          "peak_core_contact_force_n": 4.41,
+          "composite_score": 87.76,
+          "core_shattered": false,
+          "core_extracted": true,
+          "max_wrist_force_n": 5.19,
+          "vision_latency_p99_ms": 10.6,
+          "force_ok_25": true,
+          "score_breakdown": {
+            "vision": 19.88,
+            "clearance": 25.0,
+            "extraction": 30.0,
+            "safety": 10.0,
+            "latency": 2.88
+          }
+        },
+        {
+          "seed": 22,
+          "vision_3d_rmse_mm": 14.0,
+          "rubble_cleared_count": 2,
+          "peak_core_contact_force_n": 15.38,
+          "composite_score": 80.25,
+          "core_shattered": false,
+          "core_extracted": true,
+          "max_wrist_force_n": 14.64,
+          "vision_latency_p99_ms": 9.35,
+          "force_ok_25": true,
+          "score_breakdown": {
+            "vision": 19.5,
+            "clearance": 25.0,
+            "extraction": 30.0,
+            "safety": 2.62,
+            "latency": 3.13
+          }
+        },
+        {
+          "seed": 33,
+          "vision_3d_rmse_mm": 22.15,
+          "rubble_cleared_count": 2,
+          "peak_core_contact_force_n": 11.76,
+          "composite_score": 77.76,
+          "core_shattered": false,
+          "core_extracted": true,
+          "max_wrist_force_n": 10.99,
+          "vision_latency_p99_ms": 9.37,
+          "force_ok_25": true,
+          "score_breakdown": {
+            "vision": 13.39,
+            "clearance": 25.0,
+            "extraction": 30.0,
+            "safety": 6.24,
+            "latency": 3.13
+          }
+        }
+      ]
+    },
+    "holdout": {
+      "seeds": [
+        101,
+        102,
+        103
+      ],
+      "diagnostics": false,
+      "aggregate": {
+        "vision_3d_rmse_mm": 13.99,
+        "rubble_cleared_count": 2.0,
+        "peak_core_contact_force_n": 7.81,
+        "composite_score": 85.56,
+        "core_shattered": false,
+        "core_extracted": true,
+        "extraction_rate": 1.0,
+        "max_wrist_force_n": 13.31,
+        "vision_latency_p99_ms": 9.68,
+        "force_ok_25": true,
+        "passed": true
+      },
+      "per_seed": [
+        {
+          "seed": 101,
+          "vision_3d_rmse_mm": 16.25,
+          "rubble_cleared_count": 2,
+          "peak_core_contact_force_n": 4.87,
+          "composite_score": 85.89,
+          "core_shattered": false,
+          "core_extracted": true,
+          "max_wrist_force_n": 5.65,
+          "vision_latency_p99_ms": 9.6,
+          "force_ok_25": true,
+          "score_breakdown": {
+            "vision": 17.81,
+            "clearance": 25.0,
+            "extraction": 30.0,
+            "safety": 10.0,
+            "latency": 3.08
+          }
+        },
+        {
+          "seed": 102,
+          "vision_3d_rmse_mm": 10.42,
+          "rubble_cleared_count": 2,
+          "peak_core_contact_force_n": 4.5,
+          "composite_score": 90.25,
+          "core_shattered": false,
+          "core_extracted": true,
+          "max_wrist_force_n": 5.29,
+          "vision_latency_p99_ms": 9.68,
+          "force_ok_25": true,
+          "score_breakdown": {
+            "vision": 22.18,
+            "clearance": 25.0,
+            "extraction": 30.0,
+            "safety": 10.0,
+            "latency": 3.06
+          }
+        },
+        {
+          "seed": 103,
+          "vision_3d_rmse_mm": 15.29,
+          "rubble_cleared_count": 2,
+          "peak_core_contact_force_n": 14.05,
+          "composite_score": 80.55,
+          "core_shattered": false,
+          "core_extracted": true,
+          "max_wrist_force_n": 13.31,
+          "vision_latency_p99_ms": 9.62,
+          "force_ok_25": true,
+          "score_breakdown": {
+            "vision": 18.53,
+            "clearance": 25.0,
+            "extraction": 30.0,
+            "safety": 3.95,
+            "latency": 3.08
+          }
+        }
+      ]
+    }
+  },
+  "law5": {
+    "passed": true,
+    "reasons": []
+  },
+  "dod_assertions": [
+    {
+      "metric": "core_extracted",
+      "op": "==",
+      "seeds": "holdout",
+      "value": true,
+      "passed": true
+    },
+    {
+      "metric": "rubble_cleared_count",
+      "op": ">=",
+      "seeds": "holdout",
+      "value": 2,
+      "passed": true
+    },
+    {
+      "metric": "extraction_rate",
+      "op": ">",
+      "seeds": "holdout",
+      "value": 0.8,
+      "passed": true
+    },
+    {
+      "metric": "vision_latency_p99_ms",
+      "op": "<",
+      "seeds": "holdout",
+      "value": 50,
+      "passed": true
+    },
+    {
+      "metric": "peak_core_contact_force_n",
+      "op": "<",
+      "seeds": "holdout",
+      "value": 10,
+      "passed": true
+    },
+    {
+      "metric": "max_wrist_force_n",
+      "op": "<",
+      "seeds": "holdout",
+      "value": 15,
+      "passed": true
+    },
+    {
+      "metric": "core_shattered",
+      "op": "==",
+      "seeds": "holdout",
+      "value": false,
+      "passed": true
+    },
+    {
+      "metric": "composite_score",
+      "op": ">",
+      "seeds": "holdout",
+      "value": 85.0,
+      "passed": true
+    },
+    {
+      "metric": "vision_latency_p99_ms",
+      "op": "<",
+      "seeds": "opt",
+      "value": 25.0,
+      "passed": true
+    }
+  ],
+  "evidence_unchanged": true,
+  "context_stats": {
+    "n_transactions": 56,
+    "n_versions": 5,
+    "playbook_tokens": 399,
+    "context_reads": 9,
+    "context_read_tokens": 3033,
+    "context_write_tokens": 2325,
+    "conflicts_prevented": 0,
+    "transactions_pruned": 0
+  },
+  "prompt_versions": {
+    "RootArchitect": [
+      1,
+      2
+    ],
+    "VisionSpecialist": [
+      1,
+      2
+    ],
+    "ControlSpecialist": [
+      1,
+      2
+    ],
+    "IndependentVerifier": [
+      1,
+      2
+    ]
+  },
+  "recent_agent_receipts": [
+    {
+      "agent": "RootArchitect",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "agent_prompt_version": 1
+      }
+    },
+    {
+      "agent": "VisionSpecialist",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "agent_prompt_version": 1
+      }
+    },
+    {
+      "agent": "ControlSpecialist",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "agent_prompt_version": 1
+      }
+    },
+    {
+      "agent": "IndependentVerifier",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "agent_prompt_version": 1
+      }
+    },
+    {
+      "agent": "RootArchitect",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "agent_prompt_version": 2
+      }
+    },
+    {
+      "agent": "VisionSpecialist",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "agent_prompt_version": 2
+      }
+    },
+    {
+      "agent": "ControlSpecialist",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "agent_prompt_version": 2
+      }
+    },
+    {
+      "agent": "IndependentVerifier",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "agent_prompt_version": 2
+      }
+    },
+    {
+      "agent": "RootArchitect",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "operation": "architect",
+        "prompt_version": 2,
+        "context_tokens": 410,
+        "guidance_sha256": "996f8a60858afeac7a55ec4c06a740070b7eda7d767781fd032fdad4752e3283"
+      }
+    },
+    {
+      "agent": "RootArchitect",
+      "target": "operation_receipt",
+      "detail": {
+        "operation": "architect",
+        "outcome": "completed",
+        "prompt_version": 2
+      }
+    },
+    {
+      "agent": "VisionSpecialist",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "operation": "final_unverified_review",
+        "prompt_version": 2,
+        "context_tokens": 413,
+        "guidance_sha256": "212864158f881eef24a525a045fab493f0cdf9ab6421c697d40c06d1c76066e7"
+      }
+    },
+    {
+      "agent": "VisionSpecialist",
+      "target": "operation_receipt",
+      "detail": {
+        "operation": "final_unverified_review",
+        "outcome": "completed",
+        "prompt_version": 2
+      }
+    },
+    {
+      "agent": "ControlSpecialist",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "operation": "final_unverified_review",
+        "prompt_version": 2,
+        "context_tokens": 411,
+        "guidance_sha256": "727e0412d8c6bcafd5a51285640406f45e53fd848d299c1a74bda6aefe755d77"
+      }
+    },
+    {
+      "agent": "ControlSpecialist",
+      "target": "operation_receipt",
+      "detail": {
+        "operation": "final_unverified_review",
+        "outcome": "completed",
+        "prompt_version": 2
+      }
+    },
+    {
+      "agent": "IndependentVerifier",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "operation": "unverified_draft_receipt",
+        "prompt_version": 2,
+        "context_tokens": 410,
+        "guidance_sha256": "c4d29b72da7218ff62388bf911c2111e2870439e7a5f8d789792f70d209f19ab"
+      }
+    },
+    {
+      "agent": "IndependentVerifier",
+      "target": "operation_receipt",
+      "detail": {
+        "operation": "unverified_draft_receipt",
+        "outcome": "completed",
+        "prompt_version": 2
+      }
+    },
+    {
+      "agent": "IndependentVerifier",
+      "target": "evolved_agent_prompts.json",
+      "detail": {
+        "operation": "final_fixed_contract_check",
+        "prompt_version": 2,
+        "context_tokens": 410,
+        "guidance_sha256": "c4d29b72da7218ff62388bf911c2111e2870439e7a5f8d789792f70d209f19ab"
+      }
+    },
+    {
+      "agent": "IndependentVerifier",
+      "target": "operation_receipt",
+      "detail": {
+        "operation": "final_fixed_contract_check",
+        "outcome": "completed",
+        "prompt_version": 2
+      }
+    }
+  ]
+}

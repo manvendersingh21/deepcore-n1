@@ -1,0 +1,60 @@
+{
+  "goal": "Extract the intact core, clear both boulders, improve held-out performance with safe force and latency.",
+  "source": "llm:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+  "assertions": [
+    {
+      "seeds": "holdout",
+      "metric": "core_extracted",
+      "op": "==",
+      "value": true
+    },
+    {
+      "seeds": "holdout",
+      "metric": "rubble_cleared_count",
+      "op": ">=",
+      "value": 2
+    },
+    {
+      "seeds": "holdout",
+      "metric": "extraction_rate",
+      "op": ">",
+      "value": 0.8
+    },
+    {
+      "seeds": "holdout",
+      "metric": "vision_latency_p99_ms",
+      "op": "<",
+      "value": 50
+    },
+    {
+      "seeds": "holdout",
+      "metric": "peak_core_contact_force_n",
+      "op": "<",
+      "value": 10
+    },
+    {
+      "seeds": "holdout",
+      "metric": "max_wrist_force_n",
+      "op": "<",
+      "value": 15
+    },
+    {
+      "seeds": "holdout",
+      "metric": "core_shattered",
+      "op": "==",
+      "value": false
+    },
+    {
+      "seeds": "holdout",
+      "metric": "composite_score",
+      "op": ">",
+      "value": 85.0
+    },
+    {
+      "seeds": "opt",
+      "metric": "vision_latency_p99_ms",
+      "op": "<",
+      "value": 25.0
+    }
+  ]
+}

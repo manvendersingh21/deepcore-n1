@@ -1,0 +1,250 @@
+<mujoco model="deepcore_n1_excavation_basin">
+  <compiler angle="radian" autolimits="true"/>
+  <option timestep="0.005" gravity="0 0 -9.81" integrator="implicitfast" cone="elliptic" impratio="10"/>
+  <statistic center="0.45 0 0.5" extent="1.2"/>
+
+  <visual>
+    <global offwidth="1280" offheight="960"/>
+    <quality shadowsize="4096" offsamples="4"/>
+    <headlight ambient="0.18 0.16 0.14" diffuse="0.20 0.19 0.17" specular="0.05 0.05 0.05"/>
+    <map znear="0.01" zfar="5" haze="0.25" shadowclip="1.5" shadowscale="0.6"/>
+    <rgba haze="0.10 0.08 0.06 1"/>
+  </visual>
+
+  <asset>
+    <!-- procedural textures (env_runner overwrites earth/rock tex_data with seeded fractal noise) -->
+    <texture name="tex_earth" type="2d" builtin="flat" mark="random" random="0.35" width="512" height="512" rgb1="0.30 0.22 0.15" rgb2="0.16 0.11 0.07" markrgb="0.45 0.35 0.24"/>
+    <texture name="tex_wall" type="2d" builtin="flat" mark="random" random="0.25" width="256" height="256" rgb1="0.26 0.19 0.13" rgb2="0.12 0.09 0.06" markrgb="0.38 0.30 0.22"/>
+    <texture name="tex_rock" type="2d" builtin="flat" mark="random" random="0.4" width="128" height="128" rgb1="0.33 0.31 0.29" rgb2="0.2 0.2 0.2" markrgb="0.45 0.43 0.40"/>
+    <texture name="tex_steel" type="2d" builtin="flat" mark="random" random="0.15" width="128" height="128" rgb1="0.42 0.43 0.44" rgb2="0.3 0.3 0.3" markrgb="0.55 0.38 0.22"/>
+    <texture name="tex_rim" type="2d" builtin="checker" width="64" height="64" rgb1="0.80 0.62 0.05" rgb2="0.08 0.08 0.08"/>
+    <material name="earth" texture="tex_earth" texrepeat="3 3" specular="0.12" shininess="0.15" reflectance="0.0"/>
+    <material name="wall" texture="tex_wall" texrepeat="4 1" specular="0.08" shininess="0.1"/>
+    <material name="rim" rgba="0.24 0.18 0.12 1" specular="0.05"/>
+    <material name="rock_dark" texture="tex_rock" rgba="0.55 0.50 0.46 1" specular="0.18" shininess="0.25"/>
+    <material name="rock_grey" texture="tex_rock" rgba="0.80 0.78 0.76 1" specular="0.2" shininess="0.3"/>
+    <material name="rock_brown" texture="tex_rock" rgba="0.80 0.62 0.46 1" specular="0.15" shininess="0.2"/>
+    <material name="gravel" texture="tex_rock" rgba="0.62 0.56 0.50 1" specular="0.1"/>
+    <material name="steel" texture="tex_steel" specular="0.5" shininess="0.6"/>
+    <material name="hazard" texture="tex_rim" texrepeat="6 1" specular="0.2"/>
+    <material name="metal" rgba="0.55 0.57 0.62 1" specular="0.6" shininess="0.8"/>
+    <material name="pad" rgba="0.12 0.12 0.13 1"/>
+    <material name="mat_core" rgba="0.10 0.85 0.92 1" specular="0.55" shininess="0.7" emission="0.08"/>
+    <material name="mat_rubble_a" texture="tex_rock" rgba="1.0 0.72 0.28 1" specular="0.15" shininess="0.2"/>
+    <material name="mat_rubble_b" texture="tex_rock" rgba="0.95 0.42 0.80 1" specular="0.15" shininess="0.2"/>
+  </asset>
+
+  <default>
+    <default class="obj">
+      <geom type="box" condim="4" friction="1.2 0.02 0.002" solref="0.004 1" solimp="0.95 0.99 0.001" density="0"/>
+    </default>
+    <default class="decor">
+      <geom contype="0" conaffinity="0" group="1"/>
+    </default>
+    <default class="decor_solid">
+      <geom group="1" friction="1.0 0.01 0.001"/>
+    </default>
+    <default class="zone">
+      <site type="cylinder" group="2"/>
+    </default>
+  </default>
+
+  <worldbody>
+    <!-- miner's headlamp: tilted spot from the gantry side + dim cavern fill; shadows on -->
+    <light name="key" mode="fixed" pos="0.95 -0.55 1.35" dir="-0.48 0.40 -0.78" diffuse="1.25 1.10 0.90" specular="0.35 0.32 0.28"
+           cutoff="38" exponent="6" attenuation="1 0 0" castshadow="true"/>
+    <light name="fill" mode="fixed" pos="0.10 0.55 1.20" dir="0.25 -0.45 -0.85" diffuse="0.32 0.30 0.34" specular="0.05 0.05 0.05"
+           cutoff="60" exponent="2" castshadow="false"/>
+    <light name="bounce" directional="true" pos="0.45 0 2" dir="0 0 -1" diffuse="0.22 0.19 0.16" specular="0 0 0" castshadow="false"/>
+
+    <!-- excavation basin: floor top at z=0.400, rough walls, outer rim ground at z=0.62 -->
+    <body name="basin" pos="0 0 0">
+      <geom name="pit_floor" type="box" size="0.40 0.44 0.20" pos="0.45 0 0.20" material="earth" friction="0.9 0.01 0.001"/>
+      <geom name="wall_n" type="box" size="0.44 0.04 0.12" pos="0.45 0.46 0.50" euler="-0.18 0 0" material="wall"/>
+      <geom name="wall_s" type="box" size="0.44 0.04 0.12" pos="0.45 -0.46 0.50" euler="0.18 0 0" material="wall"/>
+      <geom name="wall_w" type="box" size="0.04 0.46 0.12" pos="0.03 0 0.50" euler="0 0.18 0" material="wall"/>
+      <geom name="wall_e" type="box" size="0.04 0.46 0.12" pos="0.87 0 0.50" euler="0 -0.18 0" material="wall"/>
+      <geom name="rim_n" type="box" size="1.6 0.6 0.31" pos="0.45 1.08 0.31" material="rim" contype="0" conaffinity="0"/>
+      <geom name="rim_s" type="box" size="1.6 0.6 0.31" pos="0.45 -1.08 0.31" material="rim" contype="0" conaffinity="0"/>
+      <geom name="rim_w" type="box" size="0.6 0.5 0.31" pos="-0.57 0 0.31" material="rim" contype="0" conaffinity="0"/>
+      <geom name="rim_e" type="box" size="0.6 0.5 0.31" pos="1.47 0 0.31" material="rim" contype="0" conaffinity="0"/>
+    </body>
+    <geom name="world_floor" type="plane" size="3 3 0.05" pos="0 0 0" material="rim"/>
+
+    <!-- extraction hopper: steel tray with low walls (3 cm), green glowing ring at its centre -->
+    <body name="hopper" pos="0.52 0.16 0.400">
+      <geom name="hopper_plate" type="box" size="0.052 0.052 0.0015" pos="0 0 0.0015" material="steel" friction="1.0 0.01 0.001"/>
+      <geom name="hopper_wall_px" type="box" size="0.004 0.056 0.015" pos="0.056 0 0.015" material="hazard"/>
+      <geom name="hopper_wall_nx" type="box" size="0.004 0.056 0.015" pos="-0.056 0 0.015" material="hazard"/>
+      <geom name="hopper_wall_py" type="box" size="0.052 0.004 0.015" pos="0 0.056 0.015" material="hazard"/>
+      <geom name="hopper_wall_ny" type="box" size="0.052 0.004 0.015" pos="0 -0.056 0.015" material="hazard"/>
+    </body>
+    <site name="hopper_ring" type="cylinder" pos="0.52 0.16 0.4035" size="0.045 0.0006" rgba="0.15 1.0 0.35 0.35"/>
+    <site name="hopper_zone" class="zone" pos="0.52 0.16 0.42" size="0.045 0.02" rgba="0.15 1.0 0.35 0.15"/>
+    <!-- rubble dump marker -->
+    <site name="dump_marker" type="cylinder" pos="0.30 -0.16 0.4008" size="0.055 0.0006" rgba="0.45 0.17 0.03 0.6"/>
+    <site name="dump_zone" class="zone" pos="0.30 -0.16 0.42" size="0.055 0.02" rgba="0.55 0.22 0.04 0.15"/>
+
+    <!-- overhead RGB-D camera (straight down) and a 3rd-person view for the HUD -->
+    <camera name="cam_overhead" pos="0.42 0.0 1.05" euler="0 0 -1.5708" fovy="45"/>
+    <camera name="cam_perspective" pos="1.05 -0.62 0.95" xyaxes="0.66 0.75 0 -0.42 0.37 0.83" fovy="50"/>
+
+    <!-- scattered rubble decor: boulders at the wall bases collide; pebbles are visual only, kept > 0.10 m from
+         the core spawn region and both zones -->
+    <geom name="boulder0" type="ellipsoid" size="0.026 0.019 0.017" pos="0.158 0.012 0.409" euler="-0.27 -0.19 1.28" material="rock_brown" class="decor_solid"/>
+    <geom name="boulder1" type="ellipsoid" size="0.024 0.030 0.027" pos="0.789 0.369 0.415" euler="0.21 0.14 2.82" material="rock_dark" class="decor_solid"/>
+    <geom name="boulder2" type="ellipsoid" size="0.020 0.033 0.015" pos="0.445 0.371 0.408" euler="-0.26 -0.18 2.76" material="rock_grey" class="decor_solid"/>
+    <geom name="boulder3" type="ellipsoid" size="0.042 0.042 0.011" pos="0.702 -0.376 0.406" euler="-0.30 -0.21 2.22" material="rock_brown" class="decor_solid"/>
+    <geom name="boulder4" type="ellipsoid" size="0.027 0.040 0.016" pos="0.407 0.342 0.409" euler="0.12 0.08 0.47" material="rock_grey" class="decor_solid"/>
+    <geom name="boulder5" type="ellipsoid" size="0.027 0.040 0.019" pos="0.158 -0.201 0.410" euler="-0.16 -0.11 1.59" material="rock_grey" class="decor_solid"/>
+    <geom name="boulder6" type="ellipsoid" size="0.041 0.028 0.026" pos="0.786 -0.315 0.414" euler="0.26 0.18 1.25" material="rock_dark" class="decor_solid"/>
+    <geom name="boulder7" type="ellipsoid" size="0.036 0.036 0.018" pos="0.273 -0.346 0.410" euler="0.08 0.06 0.70" material="rock_grey" class="decor_solid"/>
+    <geom name="boulder8" type="ellipsoid" size="0.028 0.040 0.014" pos="0.152 0.103 0.408" euler="0.18 0.13 1.23" material="rock_dark" class="decor_solid"/>
+    <geom name="boulder9" type="ellipsoid" size="0.043 0.045 0.023" pos="0.773 0.086 0.412" euler="-0.21 -0.15 2.54" material="rock_grey" class="decor_solid"/>
+    <geom name="boulder10" type="ellipsoid" size="0.033 0.031 0.026" pos="0.686 -0.366 0.414" euler="-0.06 -0.04 1.00" material="rock_brown" class="decor_solid"/>
+    <geom name="boulder11" type="ellipsoid" size="0.043 0.043 0.016" pos="0.396 0.368 0.409" euler="-0.19 -0.13 3.11" material="rock_dark" class="decor_solid"/>
+    <geom name="boulder12" type="ellipsoid" size="0.020 0.041 0.024" pos="0.739 -0.072 0.413" euler="0.02 0.01 0.44" material="rock_brown" class="decor_solid"/>
+    <geom name="boulder13" type="ellipsoid" size="0.021 0.041 0.015" pos="0.760 0.040 0.408" euler="-0.27 -0.19 1.40" material="rock_dark" class="decor_solid"/>
+    <geom name="boulder14" type="ellipsoid" size="0.043 0.042 0.019" pos="0.122 -0.120 0.410" euler="0.10 0.07 1.43" material="rock_dark" class="decor_solid"/>
+    <geom name="boulder15" type="ellipsoid" size="0.029 0.034 0.023" pos="0.339 -0.342 0.413" euler="0.11 0.08 1.57" material="rock_brown" class="decor_solid"/>
+    <geom name="boulder16" type="ellipsoid" size="0.022 0.024 0.014" pos="0.730 -0.350 0.408" euler="-0.17 -0.12 0.15" material="rock_brown" class="decor_solid"/>
+    <geom name="boulder17" type="ellipsoid" size="0.028 0.029 0.022" pos="0.713 0.351 0.412" euler="0.26 0.19 2.47" material="rock_grey" class="decor_solid"/>
+    <geom name="boulder18" type="ellipsoid" size="0.040 0.024 0.025" pos="0.591 -0.370 0.414" euler="0.14 0.09 1.59" material="rock_grey" class="decor_solid"/>
+    <geom name="boulder19" type="ellipsoid" size="0.019 0.019 0.019" pos="0.749 -0.004 0.411" euler="0.20 0.14 1.50" material="rock_grey" class="decor_solid"/>
+    <geom name="boulder20" type="ellipsoid" size="0.034 0.038 0.019" pos="0.763 -0.007 0.411" euler="-0.00 -0.00 1.77" material="rock_dark" class="decor_solid"/>
+    <geom name="boulder21" type="ellipsoid" size="0.036 0.023 0.027" pos="0.125 0.040 0.415" euler="0.27 0.19 2.34" material="rock_grey" class="decor_solid"/>
+    <geom type="ellipsoid" size="0.0042 0.0062 0.0041" pos="0.293 -0.335 0.4021" euler="0.11 -0.15 0.21" material="rock_dark" class="decor"/>
+    <geom type="ellipsoid" size="0.0085 0.0089 0.0028" pos="0.247 0.132 0.4014" euler="-0.01 0.25 0.63" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0040 0.0048 0.0012" pos="0.604 -0.184 0.4006" euler="-0.08 -0.19 0.00" material="gravel" class="decor"/>
+    <geom type="ellipsoid" size="0.0078 0.0094 0.0045" pos="0.160 -0.211 0.4022" euler="-0.15 0.07 2.89" material="gravel" class="decor"/>
+    <geom type="box" size="0.0053 0.0077 0.0017" pos="0.187 0.262 0.4008" euler="0.00 -0.24 2.39" material="rock_brown" class="decor"/>
+    <geom type="ellipsoid" size="0.0075 0.0125 0.0026" pos="0.663 -0.013 0.4013" euler="-0.05 -0.08 1.13" material="gravel" class="decor"/>
+    <geom type="box" size="0.0042 0.0032 0.0022" pos="0.160 -0.165 0.4011" euler="-0.28 -0.21 2.88" material="rock_grey" class="decor"/>
+    <geom type="ellipsoid" size="0.0126 0.0050 0.0027" pos="0.208 -0.094 0.4013" euler="-0.29 -0.26 2.92" material="gravel" class="decor"/>
+    <geom type="ellipsoid" size="0.0083 0.0062 0.0042" pos="0.572 -0.177 0.4021" euler="-0.26 0.01 0.58" material="gravel" class="decor"/>
+    <geom type="ellipsoid" size="0.0104 0.0057 0.0024" pos="0.387 0.178 0.4012" euler="-0.07 0.11 2.48" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0088 0.0060 0.0022" pos="0.164 -0.099 0.4011" euler="0.04 0.18 0.82" material="rock_brown" class="decor"/>
+    <geom type="ellipsoid" size="0.0085 0.0126 0.0018" pos="0.329 0.286 0.4009" euler="-0.02 -0.02 2.77" material="gravel" class="decor"/>
+    <geom type="box" size="0.0044 0.0050 0.0028" pos="0.206 0.011 0.4014" euler="0.17 -0.29 3.14" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0040 0.0069 0.0014" pos="0.750 0.132 0.4007" euler="-0.28 -0.26 0.50" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0043 0.0080 0.0010" pos="0.240 0.250 0.4005" euler="-0.26 0.26 2.57" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0042 0.0045 0.0023" pos="0.130 0.319 0.4011" euler="0.28 -0.08 1.79" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0074 0.0091 0.0023" pos="0.498 -0.162 0.4011" euler="0.18 0.10 1.54" material="rock_dark" class="decor"/>
+    <geom type="ellipsoid" size="0.0067 0.0086 0.0016" pos="0.552 -0.177 0.4008" euler="-0.19 -0.15 2.83" material="rock_brown" class="decor"/>
+    <geom type="box" size="0.0072 0.0091 0.0030" pos="0.508 -0.190 0.4015" euler="-0.10 0.05 1.84" material="gravel" class="decor"/>
+    <geom type="box" size="0.0061 0.0061 0.0026" pos="0.178 0.143 0.4013" euler="-0.17 0.29 0.94" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0048 0.0063 0.0011" pos="0.288 -0.317 0.4005" euler="-0.15 -0.21 2.49" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0056 0.0032 0.0017" pos="0.755 0.307 0.4009" euler="-0.07 0.14 2.33" material="rock_brown" class="decor"/>
+    <geom type="ellipsoid" size="0.0061 0.0122 0.0042" pos="0.712 -0.023 0.4021" euler="-0.17 0.10 2.58" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0040 0.0055 0.0022" pos="0.754 -0.354 0.4011" euler="0.03 0.01 0.75" material="gravel" class="decor"/>
+    <geom type="box" size="0.0036 0.0050 0.0017" pos="0.744 -0.230 0.4008" euler="-0.20 0.12 2.58" material="rock_grey" class="decor"/>
+    <geom type="ellipsoid" size="0.0048 0.0068 0.0029" pos="0.124 0.304 0.4015" euler="-0.17 0.14 2.63" material="rock_grey" class="decor"/>
+    <geom type="ellipsoid" size="0.0125 0.0117 0.0040" pos="0.463 -0.260 0.4020" euler="0.17 -0.06 1.44" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0070 0.0040 0.0031" pos="0.190 -0.342 0.4015" euler="0.05 0.24 0.93" material="rock_brown" class="decor"/>
+    <geom type="ellipsoid" size="0.0081 0.0054 0.0023" pos="0.127 -0.207 0.4011" euler="-0.07 -0.10 0.73" material="rock_brown" class="decor"/>
+    <geom type="ellipsoid" size="0.0055 0.0116 0.0038" pos="0.471 0.367 0.4019" euler="0.03 0.01 0.32" material="rock_brown" class="decor"/>
+    <geom type="ellipsoid" size="0.0106 0.0082 0.0028" pos="0.496 0.362 0.4014" euler="-0.30 -0.18 3.01" material="gravel" class="decor"/>
+    <geom type="box" size="0.0062 0.0068 0.0012" pos="0.472 -0.340 0.4006" euler="0.27 -0.26 0.14" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0084 0.0038 0.0028" pos="0.188 0.135 0.4014" euler="0.02 0.16 0.37" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0050 0.0078 0.0020" pos="0.435 0.271 0.4010" euler="-0.06 0.19 0.24" material="gravel" class="decor"/>
+    <geom type="box" size="0.0053 0.0054 0.0015" pos="0.344 -0.262 0.4008" euler="0.11 0.05 0.76" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0050 0.0046 0.0030" pos="0.234 0.248 0.4015" euler="-0.18 -0.07 1.62" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0086 0.0057 0.0020" pos="0.572 -0.353 0.4010" euler="-0.13 0.19 1.42" material="rock_grey" class="decor"/>
+    <geom type="ellipsoid" size="0.0084 0.0072 0.0017" pos="0.183 -0.111 0.4009" euler="-0.21 0.14 1.33" material="gravel" class="decor"/>
+    <geom type="ellipsoid" size="0.0081 0.0079 0.0014" pos="0.131 -0.008 0.4007" euler="-0.01 -0.03 1.05" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0070 0.0080 0.0027" pos="0.197 -0.101 0.4013" euler="-0.10 -0.01 2.56" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0090 0.0063 0.0023" pos="0.575 -0.316 0.4012" euler="0.24 0.30 1.08" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0076 0.0069 0.0015" pos="0.443 -0.323 0.4007" euler="0.03 0.26 2.58" material="gravel" class="decor"/>
+    <geom type="ellipsoid" size="0.0116 0.0043 0.0018" pos="0.186 -0.194 0.4009" euler="0.19 -0.15 1.06" material="gravel" class="decor"/>
+    <geom type="ellipsoid" size="0.0041 0.0093 0.0033" pos="0.145 -0.276 0.4017" euler="0.20 -0.01 1.88" material="rock_dark" class="decor"/>
+    <geom type="ellipsoid" size="0.0112 0.0077 0.0030" pos="0.557 -0.218 0.4015" euler="-0.15 -0.03 2.27" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0029 0.0063 0.0031" pos="0.620 -0.072 0.4015" euler="-0.02 0.09 1.54" material="rock_dark" class="decor"/>
+    <geom type="ellipsoid" size="0.0047 0.0046 0.0025" pos="0.188 0.010 0.4012" euler="0.00 0.27 0.68" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0081 0.0061 0.0027" pos="0.773 -0.111 0.4014" euler="0.21 -0.21 2.80" material="gravel" class="decor"/>
+    <geom type="box" size="0.0031 0.0047 0.0013" pos="0.199 0.173 0.4006" euler="-0.11 0.04 0.69" material="rock_brown" class="decor"/>
+    <geom type="box" size="0.0066 0.0059 0.0026" pos="0.383 0.297 0.4013" euler="-0.10 -0.23 0.76" material="gravel" class="decor"/>
+    <geom type="box" size="0.0075 0.0076 0.0012" pos="0.223 -0.070 0.4006" euler="-0.08 0.21 1.52" material="rock_dark" class="decor"/>
+    <geom type="ellipsoid" size="0.0081 0.0052 0.0022" pos="0.618 -0.108 0.4011" euler="-0.27 -0.25 2.82" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0078 0.0039 0.0018" pos="0.603 0.063 0.4009" euler="0.21 0.02 0.39" material="rock_brown" class="decor"/>
+    <geom type="box" size="0.0076 0.0084 0.0013" pos="0.149 -0.344 0.4007" euler="-0.27 0.20 2.21" material="gravel" class="decor"/>
+    <geom type="box" size="0.0045 0.0045 0.0027" pos="0.265 0.319 0.4013" euler="0.01 0.04 0.35" material="rock_brown" class="decor"/>
+    <geom type="ellipsoid" size="0.0103 0.0095 0.0032" pos="0.192 0.354 0.4016" euler="-0.21 0.05 0.03" material="rock_dark" class="decor"/>
+    <geom type="box" size="0.0065 0.0087 0.0020" pos="0.138 -0.116 0.4010" euler="0.27 -0.12 1.51" material="rock_grey" class="decor"/>
+    <geom type="ellipsoid" size="0.0050 0.0041 0.0039" pos="0.435 -0.337 0.4020" euler="0.11 -0.03 1.56" material="rock_grey" class="decor"/>
+    <geom type="ellipsoid" size="0.0049 0.0100 0.0015" pos="0.690 -0.078 0.4007" euler="-0.08 -0.04 2.29" material="rock_brown" class="decor"/>
+    <geom type="box" size="0.0077 0.0080 0.0030" pos="0.674 0.342 0.4015" euler="-0.09 -0.28 1.42" material="rock_grey" class="decor"/>
+    <geom type="box" size="0.0054 0.0054 0.0027" pos="0.157 -0.212 0.4013" euler="0.12 -0.29 2.26" material="rock_grey" class="decor"/>
+    <geom type="ellipsoid" size="0.0072 0.0097 0.0018" pos="0.623 -0.361 0.4009" euler="0.28 0.17 1.95" material="gravel" class="decor"/>
+    <geom type="ellipsoid" size="0.0126 0.0070 0.0034" pos="0.637 0.324 0.4017" euler="0.25 -0.27 0.90" material="rock_dark" class="decor"/>
+    <geom type="ellipsoid" size="0.0078 0.0072 0.0035" pos="0.498 -0.205 0.4017" euler="0.20 0.07 2.26" material="rock_brown" class="decor"/>
+    <geom type="box" size="0.0085 0.0037 0.0027" pos="0.131 0.130 0.4014" euler="-0.25 0.07 0.98" material="gravel" class="decor"/>
+    <geom type="box" size="0.0064 0.0058 0.0027" pos="0.364 0.366 0.4014" euler="-0.22 0.29 0.51" material="rock_grey" class="decor"/>
+    <geom type="ellipsoid" size="0.0082 0.0051 0.0029" pos="0.715 0.353 0.4014" euler="0.17 0.30 0.77" material="rock_brown" class="decor"/>
+    <geom type="ellipsoid" size="0.0040 0.0127 0.0042" pos="0.143 0.356 0.4021" euler="-0.06 -0.18 1.88" material="gravel" class="decor"/>
+    <geom type="box" size="0.0086 0.0065 0.0030" pos="0.247 -0.022 0.4015" euler="-0.22 0.09 0.58" material="gravel" class="decor"/>
+    <geom type="box" size="0.0029 0.0031 0.0018" pos="0.167 0.077 0.4009" euler="0.10 -0.13 0.76" material="rock_dark" class="decor"/>
+
+    <!-- Cartesian + yaw gantry. Carriages are gravity compensated (real gantries have brakes / counterweights). -->
+    <body name="gantry_x" pos="0 0 0.80" gravcomp="1">
+      <joint name="slide_x" type="slide" axis="1 0 0" range="0.10 0.80" damping="20" armature="0.5"/>
+      <geom type="box" size="0.02 0.02 0.01" pos="0 0 0.25" material="metal" contype="0" conaffinity="0" mass="1"/>
+      <body name="gantry_y" gravcomp="1">
+        <joint name="slide_y" type="slide" axis="0 1 0" range="-0.40 0.40" damping="20" armature="0.5"/>
+        <geom type="box" size="0.02 0.02 0.01" pos="0 0 0.22" material="metal" contype="0" conaffinity="0" mass="0.5"/>
+        <body name="gantry_z" gravcomp="1">
+          <joint name="slide_z" type="slide" axis="0 0 1" range="-0.40 0.10" damping="15" armature="0.3"/>
+          <geom name="z_column" type="cylinder" size="0.008 0.18" pos="0 0 0.25" material="metal" contype="0" conaffinity="0" mass="0.3"/>
+          <body name="hand" pos="0 0 0">
+            <joint name="hinge_yaw" type="hinge" axis="0 0 1" range="-3.3 3.3" damping="0.3" armature="0.002"/>
+            <site name="wrist_site" pos="0 0 0.06" size="0.006" rgba="1 0.8 0 1" group="3"/>
+            <site name="grip_site" pos="0 0 0" size="0.004" rgba="0 1 1 0.6" group="3"/>
+            <geom name="wrist_cyl" type="cylinder" size="0.014 0.02" pos="0 0 0.065" material="metal" contype="0" conaffinity="0" mass="0.02"/>
+            <geom name="palm" type="box" size="0.012 0.05 0.008" pos="0 0 0.036" material="metal" mass="0.03"/>
+            <body name="finger_left" pos="0 0 0">
+              <joint name="finger_left" type="slide" axis="0 1 0" range="0 0.045" damping="2" armature="0.01"/>
+              <geom name="pad_left" type="box" size="0.012 0.005 0.022" pos="0 0.005 0.006" material="pad" friction="1.5 0.03 0.003" condim="4" mass="0.015"/>
+            </body>
+            <body name="finger_right" pos="0 0 0">
+              <joint name="finger_right" type="slide" axis="0 -1 0" range="0 0.045" damping="2" armature="0.01"/>
+              <geom name="pad_right" type="box" size="0.012 0.005 0.022" pos="0 -0.005 0.006" material="pad" friction="1.5 0.03 0.003" condim="4" mass="0.015"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+
+    <!-- objects: nominal poses; core/env_runner.py re-places them per seed and pre-settles 1.0 s -->
+    <body name="core" pos="0.42 0 0.4225">
+      <freejoint name="core_free"/>
+      <geom name="core" class="obj" size="0.022 0.022 0.022" material="mat_core" mass="0.06"/>
+    </body>
+    <body name="rubble_a" pos="0.40 0.02 0.465">
+      <freejoint name="rubble_a_free"/>
+      <geom name="rubble_a" class="obj" size="0.036 0.024 0.020" material="mat_rubble_a" mass="0.11"/>
+    </body>
+    <body name="rubble_b" pos="0.42 -0.06 0.438">
+      <freejoint name="rubble_b_free"/>
+      <geom name="rubble_b" class="obj" size="0.032 0.024 0.020" material="mat_rubble_b" mass="0.10"/>
+    </body>
+  </worldbody>
+
+  <contact>
+    <exclude body1="finger_left" body2="finger_right"/>
+    <exclude body1="hand" body2="finger_left"/>
+    <exclude body1="hand" body2="finger_right"/>
+  </contact>
+
+  <actuator>
+    <position name="act_x" joint="slide_x" kp="2500" kv="180" forcerange="-150 150"/>
+    <position name="act_y" joint="slide_y" kp="2500" kv="180" forcerange="-150 150"/>
+    <position name="act_z" joint="slide_z" kp="1500" kv="90" forcerange="-80 80"/>
+    <position name="act_yaw" joint="hinge_yaw" kp="25" kv="1.2" forcerange="-5 5"/>
+    <position name="act_finger_left" joint="finger_left" kp="200" kv="4" forcerange="-9 9"/>
+    <position name="act_finger_right" joint="finger_right" kp="200" kv="4" forcerange="-9 9"/>
+  </actuator>
+
+  <sensor>
+    <force name="wrist_force" site="wrist_site"/>
+    <torque name="wrist_torque" site="wrist_site"/>
+  </sensor>
+</mujoco>

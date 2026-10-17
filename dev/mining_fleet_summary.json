@@ -1,0 +1,128 @@
+{
+  "t": 38.00000000000214,
+  "phase": "complete",
+  "axial_force_n": 0.0,
+  "torque_nm": 0.0,
+  "depth_mm": 0.0,
+  "rpm": -9.4e-323,
+  "layers_removed": 12,
+  "layers_total": 12,
+  "peak_force_n": 113.93849460186946,
+  "limit_force_n": 120.0,
+  "complete": true,
+  "material_model": "breakable layers",
+  "stop_reason": "layers_removed",
+  "max_depth_mm": 87.9294535996531,
+  "feed_mm": -1.297831353187114e-16,
+  "contact_torque_nm": 0.0,
+  "feed_actuator_force_n": -32.8635,
+  "cutting_power_w": 0.0,
+  "contact_count": 0,
+  "contact_force_world_n": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "contact_position_m": [
+    0.41999999999999527,
+    1.4147056422189204e-14,
+    0.4770461328845566
+  ],
+  "active_layer": null,
+  "layer_work_j": 0.0,
+  "layer_threshold_j": 0.0,
+  "total_cutting_work_j": 43.953107181777206,
+  "mode": "mining_fleet",
+  "duration_s": 38.0,
+  "drilling_complete": true,
+  "machine_positions": {
+    "driller": [
+      -0.45,
+      -0.25,
+      0.49
+    ],
+    "collector": [
+      1.15,
+      -0.600000000000063,
+      0.49
+    ]
+  },
+  "machine_phases": {
+    "driller": "parked",
+    "collector": "parked"
+  },
+  "machine_distance_m": {
+    "drill": 1.2057410435699558,
+    "collector": 6.1965299703191565
+  },
+  "debris_produced": 3,
+  "debris_collected": 3,
+  "debris_total": 3,
+  "held_debris": null,
+  "grasp_contact_count": 0,
+  "collector_contact_force_n": 0.0,
+  "collector_peak_force_n": 86.72820085703911,
+  "grasp_events": [
+    {
+      "t": 10.088999999999848,
+      "debris_id": 0,
+      "pad_contacts": 2,
+      "contact_force_n": 53.95618743650003
+    },
+    {
+      "t": 18.3969999999995,
+      "debris_id": 1,
+      "pad_contacts": 2,
+      "contact_force_n": 24.279266090476092
+    },
+    {
+      "t": 27.229000000010295,
+      "debris_id": 2,
+      "pad_contacts": 2,
+      "contact_force_n": 30.513992636649252
+    }
+  ],
+  "grasp_model": "contact-conditioned weld",
+  "drive_model": "actuated planar mobile bases",
+  "debris": [
+    {
+      "id": 0,
+      "produced": true,
+      "collected": true,
+      "released": true,
+      "position": [
+        1.050051557728734,
+        0.2648616338531773,
+        0.4490775146082161
+      ],
+      "produced_at": 5.204000000000073,
+      "picked_up_at": 10.088999999999848
+    },
+    {
+      "id": 1,
+      "produced": true,
+      "collected": true,
+      "released": true,
+      "position": [
+        1.0499806412797588,
+        0.34998147855986467,
+        0.44907751460821616
+      ],
+      "produced_at": 7.50200000000084,
+      "picked_up_at": 18.3969999999995
+    },
+    {
+      "id": 2,
+      "produced": true,
+      "collected": true,
+      "released": true,
+      "position": [
+        1.0500004576880904,
+        0.43548330239257177,
+        0.44907751460821616
+      ],
+      "produced_at": 9.818999999999997,
+      "picked_up_at": 27.229000000010295
+    }
+  ]
+}

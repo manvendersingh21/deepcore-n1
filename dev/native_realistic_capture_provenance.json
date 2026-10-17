@@ -1,0 +1,37 @@
+{
+  "seed": 101,
+  "render_mode": "MuJoCo EGL GPU0 isolated presentation model",
+  "encoded_fps": 60,
+  "simulated_duration_s": 80,
+  "wall_time_realtime_60fps_claim": false,
+  "source_sha256": {
+    "ui/ar_overlays.py": "228d93fdca75530eff2b8e7432a184da98e6494680989cdca7f6189ca0f0221e",
+    "ui/drilling_hud.py": "e1e3bfc9a0184a334521fecbab385418016174124600eafc655a785e7f2b6bc9",
+    "ui/mining_hud.py": "4fe0acf6d705159e8025f9a4a5ae417b837d146c98731b335a4a53d267216184",
+    "ui/mine_environment.py": "2016342db3fe1f7a9f5d8c0f27fe1c98f645b0f24a47e48f4fc5bfa6a64751d3",
+    "ui/mining_fleet.py": "c52fa7cc8a95340bde5eabf89eb9650be4e6de9954666eadc1a314802c6e6b06",
+    "ui/fleet_perception.py": "ff4cc862f267c0c67cb006d2e6aa3971b246a82d136098b197f3be0545cbc314",
+    "ui/industrial_arm.py": "cccded0d6a5af5ee0f7fb5c00cd82b9c8657df1521ccc9d9f9498765329c228f"
+  },
+  "changes": [
+    "Full articulated Menagerie UR5e meshes retain actual joint state",
+    "Presentation-only chamfered chassis casing meshes, vents, bolts, wheel hubs",
+    "Closer camera and neutral industrial fill light",
+    "Faceted enclosed vault with steel arches; floating scan cutaway hidden only for presentation",
+    "Measured cart and force annotations"
+  ],
+  "isolation_check": {
+    "source_arrays_unchanged": true,
+    "state_layout_unchanged": true,
+    "noncolliding_detail_geometry": true
+  },
+  "warm_smoke_before_final_casing_changes": {
+    "frame_build_ms_p50": 22.603581,
+    "frame_build_ms_p95": 24.161278
+  },
+  "limitations": [
+    "Actuated planar mobile bases and contact-conditioned weld grasp remain simulation approximations",
+    "Encoded 60fps represents distinct actual simulated states; full-loop realtime60fps is not established",
+    "Synthetic enclosure is not claimed to be a measured CMU tunnel reconstruction"
+  ]
+}

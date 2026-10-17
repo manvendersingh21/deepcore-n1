@@ -1,0 +1,30 @@
+{
+  "status": "unverified agent review; not a promotion",
+  "contract": {
+    "contract_id": "g4-49a94583",
+    "target_rmse_mm": 8.3,
+    "require_top_down_rubble_ordering": false,
+    "max_force_cutoff_n": 18.0,
+    "latency_ms": 25.0,
+    "baseline_composite": 82.02,
+    "origin": "deterministic"
+  },
+  "proposals": [
+    {
+      "agent": "VisionSpecialist",
+      "validated_static_only": true,
+      "problems": [],
+      "promoted": false,
+      "path": "~/deepcore-n1/dev/agent_review_drafts/20261017T214212475445Z/VisionSpecialist_unverified.py",
+      "sha256": "0b21009d86ce89c53221e5e2d1f503f443ae57ea97a7c3fdae9e170d66f75454"
+    },
+    {
+      "agent": "ControlSpecialist",
+      "validated_static_only": false,
+      "problems": [
+        "JSONDecodeError: Extra data: line 10 column 1 (char 473)"
+      ],
+      "promoted": false
+    }
+  ]
+}

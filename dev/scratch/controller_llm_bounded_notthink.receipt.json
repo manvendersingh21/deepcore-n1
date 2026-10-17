@@ -1,0 +1,15 @@
+{
+  "source": "dev/scratch/controller_cyansat.py",
+  "source_sha256": "81ebf2d19c2b873b36a9b2ff4913a1a9b92308e11233ae8364a05ff4b3ba1717",
+  "origin": "llm:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+  "proposal_mode": "edits",
+  "valid": true,
+  "elapsed_s": 7.86,
+  "usage": {
+    "prompt_tokens": 7498,
+    "completion_tokens": 286,
+    "finish_reason": "stop"
+  },
+  "problems": [],
+  "output": "dev/scratch/controller_llm_bounded_notthink.py"
+}

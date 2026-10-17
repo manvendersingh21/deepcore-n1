@@ -1,0 +1,74 @@
+{
+  "RootArchitect": [
+    {
+      "generation": 1,
+      "basis": "v1",
+      "contract_id": "g1-a92ff294",
+      "guidance": "DoD open; next sub-contract target RMSE <= 62.3 mm, top-down rubble ordering=True",
+      "version": 1,
+      "updated": "2026-10-17T21:05:06.324823+00:00"
+    },
+    {
+      "generation": 3,
+      "basis": "v4",
+      "contract_id": "g3-30c70db3",
+      "guidance": "DoD met; next sub-contract target RMSE <= 9.3 mm, top-down rubble ordering=True",
+      "version": 2,
+      "updated": "2026-10-17T21:21:22.243687+00:00"
+    }
+  ],
+  "VisionSpecialist": [
+    {
+      "generation": 1,
+      "basis": "v1",
+      "contract_id": "g1-a92ff294",
+      "guidance": "measured 3D RMSE 18.7 mm vs target 62.3 mm on opt seeds; hold the pose budget next generation",
+      "version": 1,
+      "updated": "2026-10-17T21:05:06.325791+00:00"
+    },
+    {
+      "generation": 3,
+      "basis": "v4",
+      "contract_id": "g3-30c70db3",
+      "guidance": "measured 3D RMSE 16.6 mm vs target 9.3 mm on opt seeds; hold the pose budget next generation",
+      "version": 2,
+      "updated": "2026-10-17T21:21:22.244725+00:00"
+    }
+  ],
+  "ControlSpecialist": [
+    {
+      "generation": 1,
+      "basis": "v1",
+      "contract_id": "g1-a92ff294",
+      "guidance": "measured 0.7/2 rubble cleared, peak core force 14.9 N (<18.0), extraction rate 0.00",
+      "version": 1,
+      "updated": "2026-10-17T21:05:06.326798+00:00"
+    },
+    {
+      "generation": 3,
+      "basis": "v4",
+      "contract_id": "g3-30c70db3",
+      "guidance": "measured 2.0/2 rubble cleared, peak core force 10.5 N (<18.0), extraction rate 1.00",
+      "version": 2,
+      "updated": "2026-10-17T21:21:22.245710+00:00"
+    }
+  ],
+  "IndependentVerifier": [
+    {
+      "generation": 1,
+      "basis": "v1",
+      "contract_id": "g1-a92ff294",
+      "guidance": "v1 passed Law 5: all gates green; DoD open",
+      "version": 1,
+      "updated": "2026-10-17T21:05:06.327868+00:00"
+    },
+    {
+      "generation": 3,
+      "basis": "v4",
+      "contract_id": "g3-30c70db3",
+      "guidance": "v4 passed Law 5: note: RMSE 16.6 mm above sub-contract target 9.3 mm; DoD met",
+      "version": 2,
+      "updated": "2026-10-17T21:21:22.246700+00:00"
+    }
+  ]
+}

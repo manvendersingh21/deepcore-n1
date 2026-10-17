@@ -1,0 +1,27 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+shared_brain/telemetry.db
+*.mp4
+.pytest_cache/
+
+# Not for publication: agent transcripts, local logs, coordination state
+codex-session-*.md
+.hacp/
+MUJOCO_LOG.TXT
+dev/robot_appearance_scene.json
+# Third-party assets with unspecified/unknown licenses (fetch via scripts/import_*.py)
+assets/cmu_mine_reference/*
+!assets/cmu_mine_reference/manifest.json
+!assets/cmu_mine_reference/README.md
+dev/cmu_video_reference/
+dev/robotic_arm.glb
+assets/robot_reference/user_arm/
+assets/robot_reference/sketchfab_*.txt
+__pycache__/
+dev/logs_*.txt
+dev/*.log
+site/
+shared_brain/brain.db-shm
+shared_brain/brain.db-wal

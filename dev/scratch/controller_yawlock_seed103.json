@@ -1,0 +1,1 @@
+{"composite_score": 46.63, "core_extracted": false, "core_shattered": true, "force_ok_25": true, "max_wrist_force_n": 24.25, "peak_core_contact_force_n": 25.01, "rubble_cleared_count": 2, "score_breakdown": {"clearance": 25.0, "extraction": 0.0, "latency": 3.1, "safety": 0.0, "vision": 18.53}, "seed": 103, "vision_3d_rmse_mm": 15.29, "vision_latency_p99_ms": 9.48}
