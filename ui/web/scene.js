@@ -379,9 +379,20 @@ export class MineScene {
   addChassisDetails(chassis) {
     // Fasteners and guards follow the measured chassis transform. They are
     // presentation children, never controller observations or collision shapes.
-    const steel = new THREE.MeshStandardMaterial({color:0xb9c2c8,metalness:.8,roughness:.32});
-    const rubber = new THREE.MeshStandardMaterial({color:0x141b20,roughness:.86});
-    const amber = new THREE.MeshStandardMaterial({color:0xf7bd54,metalness:.15,roughness:.45});
+    const steel = new THREE.MeshStandardMaterial({color:0xb9c2c8,metalness:.85,roughness:.28});
+    const rubber = new THREE.MeshStandardMaterial({color:0x0c1114,roughness:.9,metalness:0});
+    const amber = new THREE.MeshStandardMaterial({color:0xf7bd54,metalness:.15,roughness:.4,emissive:0x3a2600,emissiveIntensity:.35});
+    // Soft contact shadow under the base: a transparent blob, presentation only.
+    const shadowTex = document.createElement('canvas'); shadowTex.width = shadowTex.height = 128;
+    const g = shadowTex.getContext('2d'), grad = g.createRadialGradient(64, 64, 8, 64, 64, 64);
+    grad.addColorStop(0, 'rgba(0,0,0,0.55)'); grad.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = grad; g.fillRect(0, 0, 128, 128);
+    const blob = new THREE.Mesh(new THREE.PlaneGeometry(.62, .46), new THREE.MeshBasicMaterial({map: new THREE.CanvasTexture(shadowTex), transparent: true, depthWrite: false}));
+    blob.position.set(0, 0, -.06); chassis.add(blob);
+    // Side skirts and a thin amber safety stripe along each flank.
+    for (const x of [-.181,.181]) {
+      const stripe = new THREE.Mesh(new THREE.BoxGeometry(.004,.22,.006), amber);
+      stripe.position.set(x*1.01, 0, .03); chassis.add(stripe);
+    }
     for (const x of [-.155,.155]) for (const y of [-.093,.093]) {
       const bolt=new THREE.Mesh(new THREE.CylinderGeometry(.006,.006,.004,6),steel);
       bolt.rotation.x=Math.PI/2;bolt.position.set(x,y,.047);chassis.add(bolt);
