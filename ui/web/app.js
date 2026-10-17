@@ -74,12 +74,18 @@ $('evolve-btn').onclick=()=>run('evolve');
 $('learning-run-btn').onclick=()=>{tab('learning');run('evolve');};
 $('fleet-learn-btn').onclick=()=>run('fleet-learn');
 function setBusy(value) {
- for(const id of ['run-btn','evolve-btn','learning-run-btn','fleet-learn-btn','seed','pipeline','operation']) $(id).disabled=value;
+ // Polled every 200 ms: only touch the DOM when a value changes, otherwise an open
+ // scenario dropdown is rebuilt under the user's cursor and appears to glitch.
+ const setIfChanged=(el,prop,next)=>{if(el[prop]!==next)el[prop]=next;};
+ for(const id of ['run-btn','evolve-btn','learning-run-btn','fleet-learn-btn','seed','pipeline','operation']) setIfChanged($(id),'disabled',value);
  const operation=$('operation').value, drill=operation!=='excavate';
- $('pipeline').disabled=value||drill;
- $('pipeline').parentElement.hidden=drill;
- for(const option of $('seed').options) option.textContent=drill?`Scenario ${option.value}`:`${option.value} · ${Number(option.value)>=100?'Holdout':'Optimization'}`;
- $('evolve-btn').disabled=value||drill;
+ setIfChanged($('pipeline'),'disabled',value||drill);
+ setIfChanged($('pipeline').parentElement,'hidden',drill);
+ for(const option of $('seed').options){
+  const label=drill?`Scenario ${option.value}`:`${option.value} · ${Number(option.value)>=100?'Holdout':'Optimization'}`;
+  setIfChanged(option,'textContent',label);
+ }
+ setIfChanged($('evolve-btn'),'disabled',value||drill);
  $('run-btn').innerHTML=value?'<span class="loader" style="width:12px;height:12px"></span> Running':`<span>▶</span> ${operation==='fleet'?'Start mining crew':drill?'Start drilling':'Recover core'} <span>↗</span>`;
 }
 function stopReplay() {replayActive=false;$('replay-btn').textContent='▶';$('replay-btn').setAttribute('aria-label','Replay measured episode');$('replay-btn').dataset.replaying='false';window.__deepcoreReplay.active=false;}
