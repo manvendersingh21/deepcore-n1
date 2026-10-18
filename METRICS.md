@@ -25,7 +25,7 @@ Per seed:
 | 103 | holdout | 80.55 | 14.05 | yes | no |
 
 **Target not met:** the goal of composite > 88 on every seed is still open.
-Seeds 22, 33, 101 and 103 score below 88.
+Five of six seeds are below 88: 11 (87.76), 22, 33, 101 and 103. Only seed 102 (90.25) clears it.
 
 Controller: accepted v4, SHA-256
 `601d8825913e741e2069f49fd1036198001ecfa432e244ac34b5bb8f3d0af97b`.

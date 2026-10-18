@@ -49,8 +49,8 @@ Every chart is built from a saved result file. Full numbers and sources are in
 
 ![Composite score per seed](docs/charts/benchmark_composite.png)
 
-All six seeds extracted the core with no shattering. Four seeds are still below
-the target of 88, so the target is not yet met.
+All six seeds extracted the core with no shattering. Five of six seeds are still below
+the target of 88 (only seed 102 clears it), so the target is not yet met.
 
 ### Baseline vs accepted controller (seed 101)
 
