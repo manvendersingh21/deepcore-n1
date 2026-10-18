@@ -40,6 +40,43 @@ LLM-authored improvement. The >88 target on every benchmark seed remains unmet.
 A separate bounded parameter learner and backend endpoint are prepared, with **53
 CPU tests passing**.
 
+## Results at a glance
+
+Every chart is built from a saved result file. Full numbers and sources are in
+[METRICS.md](METRICS.md).
+
+### Locked benchmark (fresh run)
+
+![Composite score per seed](docs/charts/benchmark_composite.png)
+
+All six seeds extracted the core with no shattering. Four seeds are still below
+the target of 88, so the target is not yet met.
+
+### Baseline vs accepted controller (seed 101)
+
+<p align="center"><img src="docs/charts/baseline_vs_accepted.png" width="420" alt="Baseline 14.33 vs accepted 85.97"></p>
+
+The baseline fails to extract the core. The accepted v4 controller extracts it intact.
+v4 is a curated fallback from the patch library, not a model-written improvement.
+
+### Mining crew (sensor-driven, seed 101, simulation)
+
+![Driller depth and force](docs/charts/driller_depth_force.png)
+
+![Mission outcomes](docs/charts/mining_outcomes.png)
+
+The driller removes 12 of 12 layers, reaching 89 mm depth with a peak axial force of 83.2 N
+against a 120 N limit. The collector picks up 6 of 6 fragments with 0 missed pickups, and all
+3 carts are dispatched. This is one seed in simulation, not a physical robot.
+
+### Frame build time
+
+![Frame build latency](docs/charts/frame_latency.png)
+
+Real-time 60 fps is **not met**: p95 frame build is 32.4 ms against a 16.7 ms budget.
+
+---
+
 ## Quickstart
 
 ```bash
