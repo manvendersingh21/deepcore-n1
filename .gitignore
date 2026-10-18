@@ -25,3 +25,8 @@ dev/*.log
 site/
 shared_brain/brain.db-shm
 shared_brain/brain.db-wal
+
+# Local-only: editor swap, run state, demo recording work
+*.swp
+shared_brain/fleet_learning/
+dev/demo_submission/

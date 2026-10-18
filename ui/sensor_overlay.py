@@ -39,7 +39,7 @@ def camera_packet(rgb, depth, K, camera_pos, camera_rotation, mask_provider=None
     keep = ((points[:, 0] > -3) & (points[:, 0] < 4)
             & (points[:, 1] > -2) & (points[:, 1] < 2) & (points[:, 2] > .25) & (points[:, 2] < 2.5))
     points, colors = points[keep], rgb[v[keep], u[keep]]
-    stride = max(1, int(np.ceil(len(points) / 1400)))
+    stride = max(1, int(np.ceil(len(points) / 900)))
     range_m = float(np.clip(np.nanmedian(d) if d.size else .6, .1, 2.5))
     pixels = np.array([[0, 0], [w, 0], [w, h], [0, h]], float)
     rays = np.column_stack(((pixels[:, 0] - K[0, 2]) / K[0, 0] * range_m,
@@ -64,8 +64,8 @@ def camera_packet(rgb, depth, K, camera_pos, camera_rotation, mask_provider=None
         mask_source = 'Selected pipeline segmentation stage, replayed on its actual corrupted input'
     return {
         'provenance': 'actual_corrupted_rgbd',
-        'points': np.round(points[::stride], 5).reshape(-1).tolist(),
-        'colors': np.round(colors[::stride].astype(float) / 255, 3).reshape(-1).tolist(),
+        'points': np.round(points[::stride], 3).reshape(-1).tolist(),
+        'colors': np.round(colors[::stride].astype(float) / 255, 2).reshape(-1).tolist(),
         'camera_pos': camera_pos.tolist(), 'camera_rot': rotation.reshape(-1).tolist(),
         'frustum_corners': (rays @ rotation.T + camera_pos).tolist(),
         'K': K.tolist(), 'image_size': [w, h],
